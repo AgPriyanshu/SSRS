@@ -1,4 +1,5 @@
 import numpy as np
+import os
 from glob import glob
 from tqdm import tqdm_notebook as tqdm
 from sklearn.metrics import confusion_matrix
@@ -14,6 +15,7 @@ import torch.optim as optim
 import torch.optim.lr_scheduler
 import torch.nn.init
 from utils import *
+from config import config
 from torch.autograd import Variable
 from IPython.display import clear_output
 from model.UNetFormer_MMSAM_heatmap import UNetFormer as UNetFormer
@@ -65,7 +67,14 @@ print('Others: ', params-params1-params2)
 
 print("training : ", train_ids)
 print("testing : ", test_ids)
-train_set = ISPRS_dataset(train_ids, cache=CACHE)
+train_set = SemanticSegmentationDataset(
+    ids=train_ids,
+    data_pattern=config.dataset.data_pattern,
+    dsm_pattern=config.dataset.dsm_pattern,
+    label_pattern=config.dataset.label_pattern,
+    data_root=config.dataset.data_root,
+    cache=CACHE
+)
 train_loader = torch.utils.data.DataLoader(train_set,batch_size=BATCH_SIZE)
 
 base_lr = 0.01
@@ -85,15 +94,70 @@ scheduler = optim.lr_scheduler.MultiStepLR(optimizer, [25, 35, 45], gamma=0.1)
 
 def test(net, test_ids, all=False, stride=WINDOW_SIZE[0], batch_size=1, window_size=WINDOW_SIZE):
     # Use the network on the test set
-    if DATASET == 'Potsdam':
-        test_images = (1 / 255 * np.asarray(io.imread(DATA_FOLDER.format(id))[:, :, :3], dtype='float32') for id in test_ids)
-        # test_images = (1 / 255 * np.asarray(io.imread(DATA_FOLDER.format(id))[:, :, (3, 0, 1, 2)][:, :, :3], dtype='float32') for id in test_ids)
-    ## Vaihingen
-    else:
-        test_images = (1 / 255 * np.asarray(io.imread(DATA_FOLDER.format(id)), dtype='float32') for id in test_ids)
-    test_dsms = (np.asarray(io.imread(DSM_FOLDER.format(id)), dtype='float32') for id in test_ids)
-    test_labels = (np.asarray(io.imread(LABEL_FOLDER.format(id)), dtype='uint8') for id in test_ids)
-    eroded_labels = (convert_from_color(io.imread(ERODED_FOLDER.format(id))) for id in test_ids)
+    # Load test images using generic approach
+    test_images = []
+    for id in test_ids:
+        try:
+            data_path = os.path.join(config.dataset.data_root, config.dataset.data_pattern.format(id))
+            img_data = io.imread(data_path)
+            
+            # Handle different image formats
+            if len(img_data.shape) == 3 and img_data.shape[2] >= 3:
+                img_data = img_data[:, :, :3]  # Use first 3 channels
+            elif len(img_data.shape) == 2:
+                img_data = np.repeat(img_data[:, :, None], 3, axis=2)  # Grayscale to RGB
+            
+            test_images.append(1 / 255 * np.asarray(img_data, dtype='float32'))
+        except Exception as e:
+            print(f"Error loading test image {id}: {e}")
+            test_images.append(np.zeros((256, 256, 3), dtype='float32'))
+    
+    test_images = tuple(test_images)
+    
+    # Load DSM data
+    test_dsms = []
+    for id in test_ids:
+        try:
+            dsm_path = os.path.join(config.dataset.data_root, config.dataset.dsm_pattern.format(id))
+            dsm_data = np.asarray(io.imread(dsm_path), dtype='float32')
+            if len(dsm_data.shape) > 2:
+                dsm_data = dsm_data[:, :, 0]  # Take first channel
+            test_dsms.append(dsm_data)
+        except Exception as e:
+            print(f"Error loading DSM {id}: {e}")
+            test_dsms.append(np.zeros((256, 256), dtype='float32'))
+    test_dsms = tuple(test_dsms)
+    
+    # Load label data
+    test_labels = []
+    for id in test_ids:
+        try:
+            label_path = os.path.join(config.dataset.data_root, config.dataset.label_pattern.format(id))
+            label_data = np.asarray(io.imread(label_path), dtype='uint8')
+            test_labels.append(label_data)
+        except Exception as e:
+            print(f"Error loading label {id}: {e}")
+            test_labels.append(np.zeros((256, 256), dtype='uint8'))
+    test_labels = tuple(test_labels)
+    
+    # Load eroded labels (if available)
+    eroded_labels = []
+    for id in test_ids:
+        try:
+            if config.dataset.eroded_pattern:
+                eroded_path = os.path.join(config.dataset.data_root, config.dataset.eroded_pattern.format(id))
+                eroded_data = convert_from_color(io.imread(eroded_path))
+            else:
+                # Use regular labels if eroded not available
+                eroded_data = convert_from_color(test_labels[test_ids.index(id)]) if len(test_labels[test_ids.index(id)].shape) == 3 else test_labels[test_ids.index(id)]
+            eroded_labels.append(eroded_data)
+        except Exception as e:
+            print(f"Error loading eroded label {id}: {e}")
+            # Fallback to regular labels
+            idx = test_ids.index(id)
+            eroded_data = convert_from_color(test_labels[idx]) if len(test_labels[idx].shape) == 3 else test_labels[idx]
+            eroded_labels.append(eroded_data)
+    eroded_labels = tuple(eroded_labels)
     all_preds = []
     all_gts = []
 
@@ -196,21 +260,29 @@ if MODE == 'Train':
     train(net, optimizer, epochs, scheduler, weights=WEIGHTS, save_epoch=save_epoch)
 
 elif MODE == 'Test':
-    if DATASET == 'Vaihingen':
-        net.load_state_dict(torch.load('./resultsv/YOUR_MODEL'), strict=False)
+    # Load model weights (update path as needed)
+    output_dir = config.get_output_dir()
+    model_path = f"{output_dir}YOUR_MODEL"  # Update this path
+    
+    try:
+        print(f"Loading model from: {model_path}")
+        net.load_state_dict(torch.load(model_path), strict=False)
         net.eval()
-        MIoU, all_preds, all_gts = test(net, test_ids, all=True, stride=256)
-        print("MIoU: ", MIoU)
-        for p, id_ in zip(all_preds, test_ids):
-            img = convert_to_color(p)
-            io.imsave('./resultsv/inference_UNetFormer_{}_tile_{}.png'.format('huge', id_), img)
-
-    elif DATASET == 'Potsdam':
-        net.load_state_dict(torch.load('./resultsp/YOUR_MODEL'), strict=False)
-        net.eval()
+        
+        # Run evaluation
         MIoU, all_preds, all_gts = test(net, test_ids, all=True, stride=32)
-        print("MIoU: ", MIoU)
-        for p, id_ in zip(all_preds, test_ids):
-            img = convert_to_color(p)
-            io.imsave('./resultsp/inference_UNetFormer_{}_tile_{}.png'.format('base', id_), img)
+        print(f"Test mIoU: {MIoU:.4f}")
+        
+        # Save predictions
+        for pred, test_id in zip(all_preds, test_ids):
+            colored_pred = convert_to_color(pred)
+            output_path = f"{output_dir}heatmap_{config.dataset.name}_tile_{test_id}.png"
+            io.imsave(output_path, colored_pred)
+            print(f"Saved prediction: {output_path}")
+            
+    except FileNotFoundError:
+        print(f"Model file not found: {model_path}")
+        print("Please specify a valid model path for testing.")
+    except Exception as e:
+        print(f"Error during testing: {e}")
 

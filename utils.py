@@ -9,100 +9,43 @@ from PIL import Image
 from skimage import io
 import os
 from constants import N_CLASSES
+from dataset import SemanticSegmentationDataset
 
 WEIGHTS = torch.ones(N_CLASSES)  # Weights for class balancing
 
-# ISPRS color palette
-# Let's define the standard ISPRS color palette
+# Default color palette for semantic segmentation
 palette = {
-    0: (255, 255, 255),  # Impervious surfaces (white)
-    1: (0, 0, 255),  # Buildings (blue)
-    2: (0, 255, 255),  # Low vegetation (cyan)
-    3: (0, 255, 0),  # Trees (green)
-    4: (255, 255, 0),  # Cars (yellow)
-    5: (255, 0, 0),  # Clutter (red)
-    6: (0, 0, 0),
-}  # Undefined (black)
+    0: (0, 0, 0),        # Background (black)
+    1: (255, 0, 0),      # Class 1 (red)
+    2: (0, 255, 0),      # Class 2 (green)
+    3: (0, 0, 255),      # Class 3 (blue)
+    4: (255, 255, 0),    # Class 4 (yellow)
+    5: (255, 0, 255),    # Class 5 (magenta)
+    6: (0, 255, 255),    # Class 6 (cyan)
+}
 
 invert_palette = {v: k for k, v in palette.items()}
 
+# Legacy configuration variables (for backward compatibility)
+# These will be overridden by the new config system
 MODEL = "UNetformer"
-# MODEL = 'FTUNetformer'
 MODE = "Train"
-# MODE = 'Test'
-DATASET = "Vaihingen"
-# DATASET = 'Potsdam'
+DATASET = "default"
 IF_SAM = True
-# IF_SAM = False
 os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 
-if DATASET == "Vaihingen":
-    train_ids = ["1", "3", "23", "26", "7", "11", "13", "28", "17", "32", "34", "37"]
-    test_ids = ["5", "21", "15", "30"]
-    Stride_Size = 32
-    epochs = 50
-    save_epoch = 1
-    MAIN_FOLDER = FOLDER + "Vaihingen/"
-    DATA_FOLDER = MAIN_FOLDER + "top/top_mosaic_09cm_area{}.tif"
-    DSM_FOLDER = MAIN_FOLDER + "dsm/dsm_09cm_matching_area{}.tif"
-    LABEL_FOLDER = MAIN_FOLDER + "gts_for_participants/top_mosaic_09cm_area{}.tif"
-    ERODED_FOLDER = (
-        MAIN_FOLDER
-        + "gts_eroded_for_participants/top_mosaic_09cm_area{}_noBoundary.tif"
-    )
-elif DATASET == "Potsdam":
-    train_ids = [
-        "6_10",
-        "7_10",
-        "2_12",
-        "3_11",
-        "2_10",
-        "7_8",
-        "5_10",
-        "3_12",
-        "5_12",
-        "7_11",
-        "7_9",
-        "6_9",
-        "7_7",
-        "4_12",
-        "6_8",
-        "6_12",
-        "6_7",
-        "4_11",
-    ]
-    test_ids = ["4_10", "5_11", "2_11", "3_10", "6_11", "7_12"]
-    Stride_Size = 128
-    epochs = 50
-    save_epoch = 1
-    MAIN_FOLDER = FOLDER + "Potsdam/"
-    DATA_FOLDER = MAIN_FOLDER + "4_Ortho_RGBIR/top_potsdam_{}_RGBIR.tif"
-    DSM_FOLDER = (
-        MAIN_FOLDER + "1_DSM_normalisation/dsm_potsdam_{}_normalized_lastools.jpg"
-    )
-    LABEL_FOLDER = MAIN_FOLDER + "5_Labels_for_participants/top_potsdam_{}_label.tif"
-    ERODED_FOLDER = (
-        MAIN_FOLDER
-        + "5_Labels_for_participants_no_Boundary/top_potsdam_{}_label_noBoundary.tif"
-    )
+# Default values (will be overridden by config)
+train_ids = ["train_001", "train_002", "train_003"]
+test_ids = ["test_001", "test_002"]
+Stride_Size = 64
+epochs = 50
+save_epoch = 1
 
-print(
-    MODEL
-    + ", "
-    + MODE
-    + ", "
-    + DATASET
-    + ", IF_SAM: "
-    + str(IF_SAM)
-    + ", WINDOW_SIZE: ",
-    WINDOW_SIZE,
-    ", BATCH_SIZE: " + str(BATCH_SIZE),
-    ", Stride_Size: ",
-    str(Stride_Size),
-    ", epochs: " + str(epochs),
-    ", save_epoch: ",
-    str(save_epoch),
-)
+# These will be set by the dataset configuration
+DATA_FOLDER = None
+DSM_FOLDER = None  
+LABEL_FOLDER = None
+ERODED_FOLDER = None
 
 
 def convert_to_color(arr_2d, palette=palette):
@@ -136,144 +79,24 @@ def save_img(tensor, name):
     Image.fromarray(im).save(name + ".jpg")
 
 
-class ISPRS_dataset(torch.utils.data.Dataset):
-    def __init__(
-        self,
-        ids,
-        data_files=DATA_FOLDER,
-        label_files=LABEL_FOLDER,
-        cache=False,
-        augmentation=True,
-    ):
-        super(ISPRS_dataset, self).__init__()
 
-        self.augmentation = augmentation
-        self.cache = cache
-
-        # List of files
-        self.data_files = [DATA_FOLDER.format(id) for id in ids]
-        self.dsm_files = [DSM_FOLDER.format(id) for id in ids]
-        self.label_files = [LABEL_FOLDER.format(id) for id in ids]
-
-        # Sanity check : raise an error if some files do not exist
-        for f in self.data_files + self.dsm_files + self.label_files:
-            if not os.path.isfile(f):
-                raise KeyError("{} is not a file !".format(f))
-
-        # Initialize cache dicts
-        self.data_cache_ = {}
-        self.dsm_cache_ = {}
-        self.label_cache_ = {}
-
-    def __len__(self):
-        if DATASET == "Potsdam":
-            return 10 * 1000
-        elif DATASET == "Vaihingen":
-            return 10 * 1000
-        else:
-            return None
-
-    @classmethod
-    def data_augmentation(cls, *arrays, flip=True, mirror=True):
-        will_flip, will_mirror = False, False
-        if flip and random.random() < 0.5:
-            will_flip = True
-        if mirror and random.random() < 0.5:
-            will_mirror = True
-
-        results = []
-        for array in arrays:
-            if will_flip:
-                if len(array.shape) == 2:
-                    array = array[::-1, :]
-                else:
-                    array = array[:, ::-1, :]
-            if will_mirror:
-                if len(array.shape) == 2:
-                    array = array[:, ::-1]
-                else:
-                    array = array[:, :, ::-1]
-            results.append(np.copy(array))
-
-        return tuple(results)
-
-    def __getitem__(self, i):
-        # Pick a random image
-        random_idx = random.randint(0, len(self.data_files) - 1)
-
-        # If the tile hasn't been loaded yet, put in cache
-        if random_idx in self.data_cache_.keys():
-            data = self.data_cache_[random_idx]
-        else:
-            # Data is normalized in [0, 1]
-            ## Potsdam IRRG
-            if DATASET == "Potsdam":
-                ## RGB
-                data = io.imread(self.data_files[random_idx])[:, :, :3].transpose(
-                    (2, 0, 1)
-                )
-                ## IRRG
-                # data = io.imread(self.data_files[random_idx])[:, :, (3, 0, 1, 2)][:, :, :3].transpose((2, 0, 1))
-                data = 1 / 255 * np.asarray(data, dtype="float32")
-            else:
-                ## Vaihingen IRRG
-                data = io.imread(self.data_files[random_idx])
-                data = 1 / 255 * np.asarray(data.transpose((2, 0, 1)), dtype="float32")
-            if self.cache:
-                self.data_cache_[random_idx] = data
-
-        if random_idx in self.dsm_cache_.keys():
-            dsm = self.dsm_cache_[random_idx]
-        else:
-            # DSM is normalized in [0, 1]
-            dsm = np.asarray(io.imread(self.dsm_files[random_idx]), dtype="float32")
-            min = np.min(dsm)
-            max = np.max(dsm)
-            dsm = (dsm - min) / (max - min)
-            if self.cache:
-                self.dsm_cache_[random_idx] = dsm
-
-        if random_idx in self.label_cache_.keys():
-            label = self.label_cache_[random_idx]
-        else:
-            # Labels are converted from RGB to their numeric values
-            label = np.asarray(
-                convert_from_color(io.imread(self.label_files[random_idx])),
-                dtype="int64",
-            )
-            if self.cache:
-                self.label_cache_[random_idx] = label
-
-        # Get a random patch
-        x1, x2, y1, y2 = get_random_pos(data, WINDOW_SIZE)
-        data_p = data[:, x1:x2, y1:y2]
-        dsm_p = dsm[x1:x2, y1:y2]
-        label_p = label[x1:x2, y1:y2]
-
-        # Data augmentation
-        data_p, dsm_p, label_p = self.data_augmentation(data_p, dsm_p, label_p)
-
-        # Return the torch.Tensor values
-        return (
-            torch.from_numpy(data_p),
-            torch.from_numpy(dsm_p),
-            torch.from_numpy(label_p),
-        )
+# Backward compatibility alias
+ISPRS_dataset = SemanticSegmentationDataset
 
 
-## We load one tile from the dataset and we display it
-# img = io.imread('./ISPRS_dataset/Vaihingen/top/top_mosaic_09cm_area11.tif')
+# Example dataset loading and visualization (commented out)
+# img = io.imread('./data/images/img_001.jpg')
 # fig = plt.figure()
 # fig.add_subplot(121)
 # plt.imshow(img)
 #
-# # We load the ground truth
-# gt = io.imread('./ISPRS_dataset/Vaihingen/gts_for_participants/top_mosaic_09cm_area11.tif')
+# # Load the ground truth
+# gt = io.imread('./data/labels/label_001.png')
 # fig.add_subplot(122)
 # plt.imshow(gt)
 # plt.show()
 #
-# # We also check that we can convert the ground truth into an array format
+# # Convert ground truth to numerical format
 # array_gt = convert_from_color(gt)
 # print("Ground truth in numerical format has shape ({},{}) : \n".format(*array_gt.shape[:2]), array_gt)
 
@@ -345,7 +168,10 @@ def grouper(n, iterable):
         yield chunk
 
 
-def metrics(predictions, gts, label_values=LABELS):
+def metrics(predictions, gts, label_values=None):
+    if label_values is None:
+        from constants import LABELS
+        label_values = LABELS
     cm = confusion_matrix(gts, predictions, labels=range(len(label_values)))
 
     print("Confusion matrix :")
