@@ -10,7 +10,7 @@ from skimage import io
 from IPython.display import clear_output
 
 from config import config
-from utils import (
+from utils2 import (
     sliding_window, count_sliding_window, grouper, 
     convert_from_color, convert_to_color, metrics
 )

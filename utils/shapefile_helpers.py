@@ -1,9 +1,12 @@
-from typing import Optional, Tuple
+from typing import Optional, Tuple, List
 import numpy as np
 import geopandas as gpd
 import rasterio
 from rasterio import features
 from rasterio.transform import from_bounds
+from rasterio.windows import Window
+import os
+from pathlib import Path
 
 from constants import DATASET_DIR
 

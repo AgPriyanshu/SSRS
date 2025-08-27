@@ -16,7 +16,7 @@ class DatasetConfig:
     epochs: int
     save_epoch: int
     data_root: str
-    data_pattern: str  # Pattern for data files, e.g. "images/img_{}.jpg"
+    data_pattern: str  # Pattern for data files, e.g. "images/img_{}.png"
     dsm_pattern: str   # Pattern for DSM files, e.g. "dsm/dsm_{}.tif"
     label_pattern: str # Pattern for label files, e.g. "labels/label_{}.png"
     eroded_pattern: Optional[str] = None  # Optional eroded labels pattern
@@ -61,8 +61,8 @@ class Config:
         # Training configuration
         self.training = TrainingConfig()
         
-        # Labels and classes - can be customized for your dataset
-        self.labels = ["background", "class1", "class2", "class3", "class4", "class5"]
+        # Labels and classes - configured for building detection
+        self.labels = ["background", "buildings"]
         self.n_classes = len(self.labels)
         
         # Color palette for visualization - can be customized
@@ -125,7 +125,7 @@ class Config:
             epochs=50,
             save_epoch=1,
             data_root=self.data_root,
-            data_pattern="images/img_{}.jpg",
+            data_pattern="images/img_{}.png",
             dsm_pattern="dsm/dsm_{}.tif",
             label_pattern="labels/label_{}.png",
             eroded_pattern="labels_eroded/label_{}_eroded.png"

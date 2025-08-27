@@ -161,8 +161,8 @@ def main():
     parser.add_argument(
         "--data-pattern",
         type=str,
-        default="images/img_{}.jpg",
-        help="Pattern for data files (e.g., 'images/img_{}.jpg')"
+        default="images/img_{}.png",
+        help="Pattern for data files (e.g., 'images/img_{}.png')"
     )
     
     parser.add_argument(

@@ -217,6 +217,7 @@ __marimo__/
 
 # Dataset folders.
 data
+prepared_datasets
 
 # Model weights.
 weights

@@ -9,9 +9,10 @@ from IPython.display import clear_output
 from typing import Optional, Dict
 
 from config import config
+from dataset import SemanticSegmentationDataset
 from model_wrapper import ModelWrapper
-from utils import SemanticSegmentationDataset, CrossEntropy2d, accuracy, WEIGHTS
 from evaluator import Evaluator
+from utils2 import WEIGHTS, CrossEntropy2d, accuracy
 
 
 class Trainer:

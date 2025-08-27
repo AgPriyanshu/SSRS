@@ -9,7 +9,7 @@ This script maintains compatibility with the original codebase.
 
 import torch
 import torch.optim as optim
-from utils import *
+from utils2 import *
 from config import DatasetConfig
 from config import config
 from model_wrapper import ModelWrapper

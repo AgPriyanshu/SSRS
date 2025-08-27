@@ -3,7 +3,7 @@ import random
 import numpy as np
 import torch
 from skimage import io
-from utils import convert_from_color, get_random_pos
+from utils2 import convert_from_color, get_random_pos
 
 class SemanticSegmentationDataset(torch.utils.data.Dataset):
     def __init__(
@@ -119,10 +119,17 @@ class SemanticSegmentationDataset(torch.utils.data.Dataset):
         else:
             # Load and normalize DSM in [0, 1]
             try:
-                dsm = np.asarray(io.imread(self.dsm_files[random_idx]), dtype="float32")
-                # Handle different DSM formats
-                if len(dsm.shape) > 2:
-                    dsm = dsm[:, :, 0]  # Take first channel if multi-channel
+                # Use rasterio for TIF files, skimage for others
+                dsm_file = self.dsm_files[random_idx]
+                if dsm_file.endswith('.tif') or dsm_file.endswith('.tiff'):
+                    import rasterio
+                    with rasterio.open(dsm_file) as src:
+                        dsm = src.read(1).astype("float32")  # Read first band
+                else:
+                    dsm = np.asarray(io.imread(dsm_file), dtype="float32")
+                    # Handle different DSM formats
+                    if len(dsm.shape) > 2:
+                        dsm = dsm[:, :, 0]  # Take first channel if multi-channel
                 
                 # Normalize to [0, 1]
                 dsm_min = np.min(dsm)
@@ -161,12 +168,21 @@ class SemanticSegmentationDataset(torch.utils.data.Dataset):
             if self.cache:
                 self.label_cache_[random_idx] = label
 
-        # Get a random patch
+        # Since our tiles are already 256x256 (WINDOW_SIZE), use the full tile
         from constants import WINDOW_SIZE
-        x1, x2, y1, y2 = get_random_pos(data, WINDOW_SIZE)
-        data_p = data[:, x1:x2, y1:y2]
-        dsm_p = dsm[x1:x2, y1:y2]
-        label_p = label[x1:x2, y1:y2]
+        
+        # Check if tile is already the right size
+        if data.shape[1:] == WINDOW_SIZE:
+            # Use full tile - no cropping needed
+            data_p = data
+            dsm_p = dsm
+            label_p = label
+        else:
+            # Fallback: crop if tile is larger than expected
+            x1, x2, y1, y2 = get_random_pos(data, WINDOW_SIZE)
+            data_p = data[:, x1:x2, y1:y2]
+            dsm_p = dsm[x1:x2, y1:y2]
+            label_p = label[x1:x2, y1:y2]
 
         # Data augmentation
         data_p, dsm_p, label_p = self.data_augmentation(data_p, dsm_p, label_p)

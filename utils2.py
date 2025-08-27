@@ -9,7 +9,6 @@ from PIL import Image
 from skimage import io
 import os
 from constants import N_CLASSES
-from dataset import SemanticSegmentationDataset
 
 WEIGHTS = torch.ones(N_CLASSES)  # Weights for class balancing
 
@@ -80,8 +79,6 @@ def save_img(tensor, name):
 
 
 
-# Backward compatibility alias
-ISPRS_dataset = SemanticSegmentationDataset
 
 
 # Example dataset loading and visualization (commented out)
