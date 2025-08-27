@@ -1,0 +1,84 @@
+name: ssrs
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+  - defaults
+
+dependencies:
+  - python=3.10
+  - pip
+
+  # ---- PyTorch (GPU, CUDA 12.1) ----
+  - pytorch=2.3.*
+  - torchvision=0.18.*
+  - torchaudio=2.3.*
+  - pytorch-cuda=12.1
+
+  # ---- Core scientific stack ----
+  - numpy=1.24.*
+  - scipy
+  - pandas
+  - scikit-image
+  - scikit-learn
+  - matplotlib
+  - seaborn
+  - pillow
+  - tqdm
+  - ipykernel
+  - pyyaml
+  - requests
+  - tensorboard
+  - protobuf
+  - openssl
+  - ffmpeg
+  - qt-main
+  - pyqt
+
+  # ---- MONAI & friends ----
+  - monai>=1.2
+
+  # (Optional) If you’re DISPLAYing plots in WSL, keep these:
+  - jupyter_client
+  - jupyter_core
+
+  - pip:
+      # Keep/modernize selected Python-only libs from your list.
+      # NOTE: leave torch/torchvision/torchaudio OUT of pip.
+      - absl-py
+      - aiohttp
+      - alembic
+      - beautifulsoup4
+      - click
+      - colorlog
+      - einops
+      - fire
+      - flask
+      - gdown
+      - gitpython
+      - h5py
+      - huggingface-hub>=0.20
+      - jsonschema
+      - kornia>=0.7.0
+      - lmdb
+      - mlflow
+      - nibabel
+      - ninja
+      - nni
+      - opencv-python==4.7.0.72   # keep if you specifically need the pip build
+      - optuna
+      - prettytable
+      - psutil
+      - pyarrow
+      - pydicom
+      - safetensors
+      - timm==0.9.12
+      - tokenizers>=0.15
+      - transformers>=4.39
+      - tensorboardx
+      - simplejson
+      - tabulate
+      - regex
+      - tqdm
+      - websocket-client
+      - websockets
