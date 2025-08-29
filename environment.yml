@@ -69,7 +69,6 @@ dependencies:
       - optuna
       - prettytable
       - psutil
-      - pyarrow
       - pydicom
       - safetensors
       - timm==0.9.12
