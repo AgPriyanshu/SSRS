@@ -14,4 +14,4 @@ LABELS = ["background", "buildings"]  # Binary classification: background vs bui
 N_CLASSES = len(LABELS)  # Number of classes
 CACHE = True  # Store the dataset in-memory
 
-DATASET_DIR = Path("./data/MOPR")
+DATASET_DIR = Path("./data/Aarvi")

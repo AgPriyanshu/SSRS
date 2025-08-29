@@ -1,0 +1,5390 @@
+{
+  "aarvi_clean_000000": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000000"
+  },
+  "aarvi_clean_000001": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000001"
+  },
+  "aarvi_clean_000002": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000002"
+  },
+  "aarvi_clean_000003": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000003"
+  },
+  "aarvi_clean_000004": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000004"
+  },
+  "aarvi_clean_000005": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000005"
+  },
+  "aarvi_clean_000006": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000006"
+  },
+  "aarvi_clean_000007": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000007"
+  },
+  "aarvi_clean_000008": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000008"
+  },
+  "aarvi_clean_000009": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000009"
+  },
+  "aarvi_clean_000010": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000010"
+  },
+  "aarvi_clean_000011": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000011"
+  },
+  "aarvi_clean_000012": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000012"
+  },
+  "aarvi_clean_000013": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000013"
+  },
+  "aarvi_clean_000014": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000014"
+  },
+  "aarvi_clean_000015": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000015"
+  },
+  "aarvi_clean_000016": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000016"
+  },
+  "aarvi_clean_000017": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000017"
+  },
+  "aarvi_clean_000018": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000018"
+  },
+  "aarvi_clean_000019": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000019"
+  },
+  "aarvi_clean_000020": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000020"
+  },
+  "aarvi_clean_000021": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000021"
+  },
+  "aarvi_clean_000022": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000022"
+  },
+  "aarvi_clean_000023": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000023"
+  },
+  "aarvi_clean_000024": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000024"
+  },
+  "aarvi_clean_000025": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000025"
+  },
+  "aarvi_clean_000026": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000026"
+  },
+  "aarvi_clean_000027": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000027"
+  },
+  "aarvi_clean_000028": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000028"
+  },
+  "aarvi_clean_000029": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000029"
+  },
+  "aarvi_clean_000030": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000030"
+  },
+  "aarvi_clean_000031": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000031"
+  },
+  "aarvi_clean_000032": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000032"
+  },
+  "aarvi_clean_000033": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000033"
+  },
+  "aarvi_clean_000034": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000034"
+  },
+  "aarvi_clean_000035": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000035"
+  },
+  "aarvi_clean_000036": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000036"
+  },
+  "aarvi_clean_000037": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000037"
+  },
+  "aarvi_clean_000038": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000038"
+  },
+  "aarvi_clean_000039": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000039"
+  },
+  "aarvi_clean_000040": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000040"
+  },
+  "aarvi_clean_000041": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000041"
+  },
+  "aarvi_clean_000042": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000042"
+  },
+  "aarvi_clean_000043": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000043"
+  },
+  "aarvi_clean_000044": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000044"
+  },
+  "aarvi_clean_000045": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000045"
+  },
+  "aarvi_clean_000046": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000046"
+  },
+  "aarvi_clean_000047": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000047"
+  },
+  "aarvi_clean_000048": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000048"
+  },
+  "aarvi_clean_000049": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000049"
+  },
+  "aarvi_clean_000050": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000050"
+  },
+  "aarvi_clean_000051": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000051"
+  },
+  "aarvi_clean_000052": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000052"
+  },
+  "aarvi_clean_000053": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000053"
+  },
+  "aarvi_clean_000054": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000054"
+  },
+  "aarvi_clean_000055": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000055"
+  },
+  "aarvi_clean_000056": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000056"
+  },
+  "aarvi_clean_000057": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000057"
+  },
+  "aarvi_clean_000058": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000058"
+  },
+  "aarvi_clean_000059": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000059"
+  },
+  "aarvi_clean_000060": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000060"
+  },
+  "aarvi_clean_000061": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000061"
+  },
+  "aarvi_clean_000062": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000062"
+  },
+  "aarvi_clean_000063": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000063"
+  },
+  "aarvi_clean_000064": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000064"
+  },
+  "aarvi_clean_000065": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000065"
+  },
+  "aarvi_clean_000066": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000066"
+  },
+  "aarvi_clean_000067": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000067"
+  },
+  "aarvi_clean_000068": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000068"
+  },
+  "aarvi_clean_000069": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000069"
+  },
+  "aarvi_clean_000070": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000070"
+  },
+  "aarvi_clean_000071": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000071"
+  },
+  "aarvi_clean_000072": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000072"
+  },
+  "aarvi_clean_000073": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000073"
+  },
+  "aarvi_clean_000074": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000074"
+  },
+  "aarvi_clean_000075": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000075"
+  },
+  "aarvi_clean_000076": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000076"
+  },
+  "aarvi_clean_000077": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000077"
+  },
+  "aarvi_clean_000078": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000078"
+  },
+  "aarvi_clean_000079": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000079"
+  },
+  "aarvi_clean_000080": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000080"
+  },
+  "aarvi_clean_000081": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000081"
+  },
+  "aarvi_clean_000082": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000082"
+  },
+  "aarvi_clean_000083": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000083"
+  },
+  "aarvi_clean_000084": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000084"
+  },
+  "aarvi_clean_000085": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000085"
+  },
+  "aarvi_clean_000086": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000086"
+  },
+  "aarvi_clean_000087": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000087"
+  },
+  "aarvi_clean_000088": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000088"
+  },
+  "aarvi_clean_000089": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000089"
+  },
+  "aarvi_clean_000090": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000090"
+  },
+  "aarvi_clean_000091": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000091"
+  },
+  "aarvi_clean_000092": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000092"
+  },
+  "aarvi_clean_000093": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000093"
+  },
+  "aarvi_clean_000094": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000094"
+  },
+  "aarvi_clean_000095": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000095"
+  },
+  "aarvi_clean_000096": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000096"
+  },
+  "aarvi_clean_000097": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000097"
+  },
+  "aarvi_clean_000098": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000098"
+  },
+  "aarvi_clean_000099": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000099"
+  },
+  "aarvi_clean_000100": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000100"
+  },
+  "aarvi_clean_000101": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000101"
+  },
+  "aarvi_clean_000102": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000102"
+  },
+  "aarvi_clean_000103": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000103"
+  },
+  "aarvi_clean_000104": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000104"
+  },
+  "aarvi_clean_000105": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000105"
+  },
+  "aarvi_clean_000106": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000106"
+  },
+  "aarvi_clean_000107": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000107"
+  },
+  "aarvi_clean_000108": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000108"
+  },
+  "aarvi_clean_000109": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000109"
+  },
+  "aarvi_clean_000110": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000110"
+  },
+  "aarvi_clean_000111": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000111"
+  },
+  "aarvi_clean_000112": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000112"
+  },
+  "aarvi_clean_000113": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000113"
+  },
+  "aarvi_clean_000114": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000114"
+  },
+  "aarvi_clean_000115": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000115"
+  },
+  "aarvi_clean_000116": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000116"
+  },
+  "aarvi_clean_000117": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000117"
+  },
+  "aarvi_clean_000118": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000118"
+  },
+  "aarvi_clean_000119": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000119"
+  },
+  "aarvi_clean_000120": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000120"
+  },
+  "aarvi_clean_000121": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000121"
+  },
+  "aarvi_clean_000122": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000122"
+  },
+  "aarvi_clean_000123": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000123"
+  },
+  "aarvi_clean_000124": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000124"
+  },
+  "aarvi_clean_000125": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000125"
+  },
+  "aarvi_clean_000126": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000126"
+  },
+  "aarvi_clean_000127": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000127"
+  },
+  "aarvi_clean_000128": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000128"
+  },
+  "aarvi_clean_000129": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000129"
+  },
+  "aarvi_clean_000130": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000130"
+  },
+  "aarvi_clean_000131": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000131"
+  },
+  "aarvi_clean_000132": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000132"
+  },
+  "aarvi_clean_000133": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000133"
+  },
+  "aarvi_clean_000134": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000134"
+  },
+  "aarvi_clean_000135": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000135"
+  },
+  "aarvi_clean_000136": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000136"
+  },
+  "aarvi_clean_000137": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000137"
+  },
+  "aarvi_clean_000138": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000138"
+  },
+  "aarvi_clean_000139": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000139"
+  },
+  "aarvi_clean_000140": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000140"
+  },
+  "aarvi_clean_000141": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000141"
+  },
+  "aarvi_clean_000142": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000142"
+  },
+  "aarvi_clean_000143": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000143"
+  },
+  "aarvi_clean_000144": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000144"
+  },
+  "aarvi_clean_000145": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000145"
+  },
+  "aarvi_clean_000146": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000146"
+  },
+  "aarvi_clean_000147": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000147"
+  },
+  "aarvi_clean_000148": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000148"
+  },
+  "aarvi_clean_000149": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000149"
+  },
+  "aarvi_clean_000150": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000150"
+  },
+  "aarvi_clean_000151": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000151"
+  },
+  "aarvi_clean_000152": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000152"
+  },
+  "aarvi_clean_000153": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000153"
+  },
+  "aarvi_clean_000154": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000154"
+  },
+  "aarvi_clean_000155": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000155"
+  },
+  "aarvi_clean_000156": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000156"
+  },
+  "aarvi_clean_000157": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000157"
+  },
+  "aarvi_clean_000158": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000158"
+  },
+  "aarvi_clean_000159": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000159"
+  },
+  "aarvi_clean_000160": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000160"
+  },
+  "aarvi_clean_000161": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000161"
+  },
+  "aarvi_clean_000162": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000162"
+  },
+  "aarvi_clean_000163": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000163"
+  },
+  "aarvi_clean_000164": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000164"
+  },
+  "aarvi_clean_000165": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000165"
+  },
+  "aarvi_clean_000166": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000166"
+  },
+  "aarvi_clean_000167": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000167"
+  },
+  "aarvi_clean_000168": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000168"
+  },
+  "aarvi_clean_000169": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000169"
+  },
+  "aarvi_clean_000170": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000170"
+  },
+  "aarvi_clean_000171": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000171"
+  },
+  "aarvi_clean_000172": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000172"
+  },
+  "aarvi_clean_000173": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000173"
+  },
+  "aarvi_clean_000174": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000174"
+  },
+  "aarvi_clean_000175": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000175"
+  },
+  "aarvi_clean_000176": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000176"
+  },
+  "aarvi_clean_000177": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000177"
+  },
+  "aarvi_clean_000178": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000178"
+  },
+  "aarvi_clean_000179": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000179"
+  },
+  "aarvi_clean_000180": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000180"
+  },
+  "aarvi_clean_000181": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000181"
+  },
+  "aarvi_clean_000182": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000182"
+  },
+  "aarvi_clean_000183": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000183"
+  },
+  "aarvi_clean_000184": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000184"
+  },
+  "aarvi_clean_000185": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000185"
+  },
+  "aarvi_clean_000186": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000186"
+  },
+  "aarvi_clean_000187": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000187"
+  },
+  "aarvi_clean_000188": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000188"
+  },
+  "aarvi_clean_000189": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000189"
+  },
+  "aarvi_clean_000190": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000190"
+  },
+  "aarvi_clean_000191": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000191"
+  },
+  "aarvi_clean_000192": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000192"
+  },
+  "aarvi_clean_000193": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000193"
+  },
+  "aarvi_clean_000194": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000194"
+  },
+  "aarvi_clean_000195": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000195"
+  },
+  "aarvi_clean_000196": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000196"
+  },
+  "aarvi_clean_000197": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000197"
+  },
+  "aarvi_clean_000198": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000198"
+  },
+  "aarvi_clean_000199": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000199"
+  },
+  "aarvi_clean_000200": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000200"
+  },
+  "aarvi_clean_000201": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000201"
+  },
+  "aarvi_clean_000202": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000202"
+  },
+  "aarvi_clean_000203": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000203"
+  },
+  "aarvi_clean_000204": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000204"
+  },
+  "aarvi_clean_000205": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000205"
+  },
+  "aarvi_clean_000206": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000206"
+  },
+  "aarvi_clean_000207": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000207"
+  },
+  "aarvi_clean_000208": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000208"
+  },
+  "aarvi_clean_000209": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000209"
+  },
+  "aarvi_clean_000210": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000210"
+  },
+  "aarvi_clean_000211": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000211"
+  },
+  "aarvi_clean_000212": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000212"
+  },
+  "aarvi_clean_000213": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000213"
+  },
+  "aarvi_clean_000214": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000214"
+  },
+  "aarvi_clean_000215": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000215"
+  },
+  "aarvi_clean_000216": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000216"
+  },
+  "aarvi_clean_000217": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000217"
+  },
+  "aarvi_clean_000218": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000218"
+  },
+  "aarvi_clean_000219": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000219"
+  },
+  "aarvi_clean_000220": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000220"
+  },
+  "aarvi_clean_000221": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000221"
+  },
+  "aarvi_clean_000222": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000222"
+  },
+  "aarvi_clean_000223": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000223"
+  },
+  "aarvi_clean_000224": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000224"
+  },
+  "aarvi_clean_000225": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000225"
+  },
+  "aarvi_clean_000226": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000226"
+  },
+  "aarvi_clean_000227": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000227"
+  },
+  "aarvi_clean_000228": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000228"
+  },
+  "aarvi_clean_000229": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000229"
+  },
+  "aarvi_clean_000230": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000230"
+  },
+  "aarvi_clean_000231": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000231"
+  },
+  "aarvi_clean_000232": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000232"
+  },
+  "aarvi_clean_000233": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000233"
+  },
+  "aarvi_clean_000234": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000234"
+  },
+  "aarvi_clean_000235": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000235"
+  },
+  "aarvi_clean_000236": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000236"
+  },
+  "aarvi_clean_000237": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000237"
+  },
+  "aarvi_clean_000238": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000238"
+  },
+  "aarvi_clean_000239": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000239"
+  },
+  "aarvi_clean_000240": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000240"
+  },
+  "aarvi_clean_000241": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000241"
+  },
+  "aarvi_clean_000242": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000242"
+  },
+  "aarvi_clean_000243": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000243"
+  },
+  "aarvi_clean_000244": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000244"
+  },
+  "aarvi_clean_000245": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000245"
+  },
+  "aarvi_clean_000246": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000246"
+  },
+  "aarvi_clean_000247": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000247"
+  },
+  "aarvi_clean_000248": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000248"
+  },
+  "aarvi_clean_000249": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000249"
+  },
+  "aarvi_clean_000250": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000250"
+  },
+  "aarvi_clean_000251": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000251"
+  },
+  "aarvi_clean_000252": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000252"
+  },
+  "aarvi_clean_000253": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000253"
+  },
+  "aarvi_clean_000254": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000254"
+  },
+  "aarvi_clean_000255": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000255"
+  },
+  "aarvi_clean_000256": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000256"
+  },
+  "aarvi_clean_000257": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000257"
+  },
+  "aarvi_clean_000258": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000258"
+  },
+  "aarvi_clean_000259": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000259"
+  },
+  "aarvi_clean_000260": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000260"
+  },
+  "aarvi_clean_000261": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000261"
+  },
+  "aarvi_clean_000262": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000262"
+  },
+  "aarvi_clean_000263": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000263"
+  },
+  "aarvi_clean_000264": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000264"
+  },
+  "aarvi_clean_000265": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000265"
+  },
+  "aarvi_clean_000266": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000266"
+  },
+  "aarvi_clean_000267": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000267"
+  },
+  "aarvi_clean_000268": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000268"
+  },
+  "aarvi_clean_000269": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000269"
+  },
+  "aarvi_clean_000270": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000270"
+  },
+  "aarvi_clean_000271": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000271"
+  },
+  "aarvi_clean_000272": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000272"
+  },
+  "aarvi_clean_000273": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000273"
+  },
+  "aarvi_clean_000274": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000274"
+  },
+  "aarvi_clean_000275": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000275"
+  },
+  "aarvi_clean_000276": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000276"
+  },
+  "aarvi_clean_000277": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000277"
+  },
+  "aarvi_clean_000278": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000278"
+  },
+  "aarvi_clean_000279": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000279"
+  },
+  "aarvi_clean_000280": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000280"
+  },
+  "aarvi_clean_000281": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000281"
+  },
+  "aarvi_clean_000282": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000282"
+  },
+  "aarvi_clean_000283": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000283"
+  },
+  "aarvi_clean_000284": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000284"
+  },
+  "aarvi_clean_000285": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000285"
+  },
+  "aarvi_clean_000286": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000286"
+  },
+  "aarvi_clean_000287": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000287"
+  },
+  "aarvi_clean_000288": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000288"
+  },
+  "aarvi_clean_000289": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000289"
+  },
+  "aarvi_clean_000290": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000290"
+  },
+  "aarvi_clean_000291": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000291"
+  },
+  "aarvi_clean_000292": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000292"
+  },
+  "aarvi_clean_000293": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000293"
+  },
+  "aarvi_clean_000294": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000294"
+  },
+  "aarvi_clean_000295": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000295"
+  },
+  "aarvi_clean_000296": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000296"
+  },
+  "aarvi_clean_000297": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000297"
+  },
+  "aarvi_clean_000298": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000298"
+  },
+  "aarvi_clean_000299": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000299"
+  },
+  "aarvi_clean_000300": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000300"
+  },
+  "aarvi_clean_000301": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000301"
+  },
+  "aarvi_clean_000302": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000302"
+  },
+  "aarvi_clean_000303": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000303"
+  },
+  "aarvi_clean_000304": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000304"
+  },
+  "aarvi_clean_000305": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000305"
+  },
+  "aarvi_clean_000306": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000306"
+  },
+  "aarvi_clean_000307": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000307"
+  },
+  "aarvi_clean_000308": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000308"
+  },
+  "aarvi_clean_000309": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000309"
+  },
+  "aarvi_clean_000310": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000310"
+  },
+  "aarvi_clean_000311": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000311"
+  },
+  "aarvi_clean_000312": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000312"
+  },
+  "aarvi_clean_000313": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000313"
+  },
+  "aarvi_clean_000314": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000314"
+  },
+  "aarvi_clean_000315": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000315"
+  },
+  "aarvi_clean_000316": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000316"
+  },
+  "aarvi_clean_000317": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000317"
+  },
+  "aarvi_clean_000318": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000318"
+  },
+  "aarvi_clean_000319": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000319"
+  },
+  "aarvi_clean_000320": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000320"
+  },
+  "aarvi_clean_000321": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000321"
+  },
+  "aarvi_clean_000322": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000322"
+  },
+  "aarvi_clean_000323": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000323"
+  },
+  "aarvi_clean_000324": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000324"
+  },
+  "aarvi_clean_000325": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000325"
+  },
+  "aarvi_clean_000326": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000326"
+  },
+  "aarvi_clean_000327": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000327"
+  },
+  "aarvi_clean_000328": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000328"
+  },
+  "aarvi_clean_000329": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000329"
+  },
+  "aarvi_clean_000330": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000330"
+  },
+  "aarvi_clean_000331": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000331"
+  },
+  "aarvi_clean_000332": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000332"
+  },
+  "aarvi_clean_000333": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000333"
+  },
+  "aarvi_clean_000334": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000334"
+  },
+  "aarvi_clean_000335": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000335"
+  },
+  "aarvi_clean_000336": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000336"
+  },
+  "aarvi_clean_000337": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000337"
+  },
+  "aarvi_clean_000338": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000338"
+  },
+  "aarvi_clean_000339": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000339"
+  },
+  "aarvi_clean_000340": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000340"
+  },
+  "aarvi_clean_000341": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000341"
+  },
+  "aarvi_clean_000342": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000342"
+  },
+  "aarvi_clean_000343": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000343"
+  },
+  "aarvi_clean_000344": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000344"
+  },
+  "aarvi_clean_000345": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000345"
+  },
+  "aarvi_clean_000346": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000346"
+  },
+  "aarvi_clean_000347": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000347"
+  },
+  "aarvi_clean_000348": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000348"
+  },
+  "aarvi_clean_000349": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000349"
+  },
+  "aarvi_clean_000350": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000350"
+  },
+  "aarvi_clean_000351": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000351"
+  },
+  "aarvi_clean_000352": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000352"
+  },
+  "aarvi_clean_000353": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000353"
+  },
+  "aarvi_clean_000354": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000354"
+  },
+  "aarvi_clean_000355": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000355"
+  },
+  "aarvi_clean_000356": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000356"
+  },
+  "aarvi_clean_000357": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000357"
+  },
+  "aarvi_clean_000358": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000358"
+  },
+  "aarvi_clean_000359": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000359"
+  },
+  "aarvi_clean_000360": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000360"
+  },
+  "aarvi_clean_000361": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000361"
+  },
+  "aarvi_clean_000362": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000362"
+  },
+  "aarvi_clean_000363": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000363"
+  },
+  "aarvi_clean_000364": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000364"
+  },
+  "aarvi_clean_000365": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000365"
+  },
+  "aarvi_clean_000366": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000366"
+  },
+  "aarvi_clean_000367": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000367"
+  },
+  "aarvi_clean_000368": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000368"
+  },
+  "aarvi_clean_000369": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000369"
+  },
+  "aarvi_clean_000370": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000370"
+  },
+  "aarvi_clean_000371": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000371"
+  },
+  "aarvi_clean_000372": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000372"
+  },
+  "aarvi_clean_000373": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000373"
+  },
+  "aarvi_clean_000374": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000374"
+  },
+  "aarvi_clean_000375": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000375"
+  },
+  "aarvi_clean_000376": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000376"
+  },
+  "aarvi_clean_000377": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000377"
+  },
+  "aarvi_clean_000378": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000378"
+  },
+  "aarvi_clean_000379": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000379"
+  },
+  "aarvi_clean_000380": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000380"
+  },
+  "aarvi_clean_000381": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000381"
+  },
+  "aarvi_clean_000382": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000382"
+  },
+  "aarvi_clean_000383": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000383"
+  },
+  "aarvi_clean_000384": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000384"
+  },
+  "aarvi_clean_000385": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000385"
+  },
+  "aarvi_clean_000386": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000386"
+  },
+  "aarvi_clean_000387": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000387"
+  },
+  "aarvi_clean_000388": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000388"
+  },
+  "aarvi_clean_000389": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000389"
+  },
+  "aarvi_clean_000390": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000390"
+  },
+  "aarvi_clean_000391": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000391"
+  },
+  "aarvi_clean_000392": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000392"
+  },
+  "aarvi_clean_000393": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000393"
+  },
+  "aarvi_clean_000394": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000394"
+  },
+  "aarvi_clean_000395": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000395"
+  },
+  "aarvi_clean_000396": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000396"
+  },
+  "aarvi_clean_000397": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000397"
+  },
+  "aarvi_clean_000398": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000398"
+  },
+  "aarvi_clean_000399": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000399"
+  },
+  "aarvi_clean_000400": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000400"
+  },
+  "aarvi_clean_000401": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000401"
+  },
+  "aarvi_clean_000402": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000402"
+  },
+  "aarvi_clean_000403": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000403"
+  },
+  "aarvi_clean_000404": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000404"
+  },
+  "aarvi_clean_000405": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000405"
+  },
+  "aarvi_clean_000406": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000406"
+  },
+  "aarvi_clean_000407": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000407"
+  },
+  "aarvi_clean_000408": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000408"
+  },
+  "aarvi_clean_000409": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000409"
+  },
+  "aarvi_clean_000410": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000410"
+  },
+  "aarvi_clean_000411": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000411"
+  },
+  "aarvi_clean_000412": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000412"
+  },
+  "aarvi_clean_000413": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000413"
+  },
+  "aarvi_clean_000414": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000414"
+  },
+  "aarvi_clean_000415": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000415"
+  },
+  "aarvi_clean_000416": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000416"
+  },
+  "aarvi_clean_000417": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000417"
+  },
+  "aarvi_clean_000418": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000418"
+  },
+  "aarvi_clean_000419": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000419"
+  },
+  "aarvi_clean_000420": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000420"
+  },
+  "aarvi_clean_000421": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000421"
+  },
+  "aarvi_clean_000422": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000422"
+  },
+  "aarvi_clean_000423": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000423"
+  },
+  "aarvi_clean_000424": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000424"
+  },
+  "aarvi_clean_000425": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000425"
+  },
+  "aarvi_clean_000426": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000426"
+  },
+  "aarvi_clean_000427": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000427"
+  },
+  "aarvi_clean_000428": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000428"
+  },
+  "aarvi_clean_000429": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000429"
+  },
+  "aarvi_clean_000430": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000430"
+  },
+  "aarvi_clean_000431": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000431"
+  },
+  "aarvi_clean_000432": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000432"
+  },
+  "aarvi_clean_000433": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000433"
+  },
+  "aarvi_clean_000434": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000434"
+  },
+  "aarvi_clean_000435": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000435"
+  },
+  "aarvi_clean_000436": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000436"
+  },
+  "aarvi_clean_000437": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000437"
+  },
+  "aarvi_clean_000438": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000438"
+  },
+  "aarvi_clean_000439": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000439"
+  },
+  "aarvi_clean_000440": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000440"
+  },
+  "aarvi_clean_000441": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000441"
+  },
+  "aarvi_clean_000442": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000442"
+  },
+  "aarvi_clean_000443": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000443"
+  },
+  "aarvi_clean_000444": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000444"
+  },
+  "aarvi_clean_000445": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000445"
+  },
+  "aarvi_clean_000446": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000446"
+  },
+  "aarvi_clean_000447": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000447"
+  },
+  "aarvi_clean_000448": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000448"
+  },
+  "aarvi_clean_000449": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000449"
+  },
+  "aarvi_clean_000450": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000450"
+  },
+  "aarvi_clean_000451": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000451"
+  },
+  "aarvi_clean_000452": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000452"
+  },
+  "aarvi_clean_000453": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000453"
+  },
+  "aarvi_clean_000454": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000454"
+  },
+  "aarvi_clean_000455": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000455"
+  },
+  "aarvi_clean_000456": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000456"
+  },
+  "aarvi_clean_000457": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000457"
+  },
+  "aarvi_clean_000458": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000458"
+  },
+  "aarvi_clean_000459": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000459"
+  },
+  "aarvi_clean_000460": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000460"
+  },
+  "aarvi_clean_000461": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000461"
+  },
+  "aarvi_clean_000462": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000462"
+  },
+  "aarvi_clean_000463": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000463"
+  },
+  "aarvi_clean_000464": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000464"
+  },
+  "aarvi_clean_000465": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000465"
+  },
+  "aarvi_clean_000466": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000466"
+  },
+  "aarvi_clean_000467": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000467"
+  },
+  "aarvi_clean_000468": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000468"
+  },
+  "aarvi_clean_000469": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000469"
+  },
+  "aarvi_clean_000470": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000470"
+  },
+  "aarvi_clean_000471": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000471"
+  },
+  "aarvi_clean_000472": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000472"
+  },
+  "aarvi_clean_000473": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000473"
+  },
+  "aarvi_clean_000474": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000474"
+  },
+  "aarvi_clean_000475": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000475"
+  },
+  "aarvi_clean_000476": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000476"
+  },
+  "aarvi_clean_000477": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000477"
+  },
+  "aarvi_clean_000478": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000478"
+  },
+  "aarvi_clean_000479": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000479"
+  },
+  "aarvi_clean_000480": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000480"
+  },
+  "aarvi_clean_000481": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000481"
+  },
+  "aarvi_clean_000482": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000482"
+  },
+  "aarvi_clean_000483": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000483"
+  },
+  "aarvi_clean_000484": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000484"
+  },
+  "aarvi_clean_000485": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000485"
+  },
+  "aarvi_clean_000486": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000486"
+  },
+  "aarvi_clean_000487": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000487"
+  },
+  "aarvi_clean_000488": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000488"
+  },
+  "aarvi_clean_000489": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000489"
+  },
+  "aarvi_clean_000490": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000490"
+  },
+  "aarvi_clean_000491": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000491"
+  },
+  "aarvi_clean_000492": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000492"
+  },
+  "aarvi_clean_000493": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000493"
+  },
+  "aarvi_clean_000494": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000494"
+  },
+  "aarvi_clean_000495": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000495"
+  },
+  "aarvi_clean_000496": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000496"
+  },
+  "aarvi_clean_000497": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000497"
+  },
+  "aarvi_clean_000498": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000498"
+  },
+  "aarvi_clean_000499": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000499"
+  },
+  "aarvi_clean_000500": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000500"
+  },
+  "aarvi_clean_000501": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000501"
+  },
+  "aarvi_clean_000502": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000502"
+  },
+  "aarvi_clean_000503": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000503"
+  },
+  "aarvi_clean_000504": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000504"
+  },
+  "aarvi_clean_000505": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000505"
+  },
+  "aarvi_clean_000506": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000506"
+  },
+  "aarvi_clean_000507": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000507"
+  },
+  "aarvi_clean_000508": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000508"
+  },
+  "aarvi_clean_000509": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000509"
+  },
+  "aarvi_clean_000510": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000510"
+  },
+  "aarvi_clean_000511": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000511"
+  },
+  "aarvi_clean_000512": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000512"
+  },
+  "aarvi_clean_000513": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000513"
+  },
+  "aarvi_clean_000514": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000514"
+  },
+  "aarvi_clean_000515": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000515"
+  },
+  "aarvi_clean_000516": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000516"
+  },
+  "aarvi_clean_000517": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000517"
+  },
+  "aarvi_clean_000518": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000518"
+  },
+  "aarvi_clean_000519": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000519"
+  },
+  "aarvi_clean_000520": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000520"
+  },
+  "aarvi_clean_000521": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000521"
+  },
+  "aarvi_clean_000522": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000522"
+  },
+  "aarvi_clean_000523": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000523"
+  },
+  "aarvi_clean_000524": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000524"
+  },
+  "aarvi_clean_000525": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000525"
+  },
+  "aarvi_clean_000526": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000526"
+  },
+  "aarvi_clean_000527": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000527"
+  },
+  "aarvi_clean_000528": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000528"
+  },
+  "aarvi_clean_000529": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000529"
+  },
+  "aarvi_clean_000530": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000530"
+  },
+  "aarvi_clean_000531": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000531"
+  },
+  "aarvi_clean_000532": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000532"
+  },
+  "aarvi_clean_000533": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000533"
+  },
+  "aarvi_clean_000534": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000534"
+  },
+  "aarvi_clean_000535": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000535"
+  },
+  "aarvi_clean_000536": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000536"
+  },
+  "aarvi_clean_000537": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000537"
+  },
+  "aarvi_clean_000538": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000538"
+  },
+  "aarvi_clean_000539": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000539"
+  },
+  "aarvi_clean_000540": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000540"
+  },
+  "aarvi_clean_000541": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000541"
+  },
+  "aarvi_clean_000542": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000542"
+  },
+  "aarvi_clean_000543": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000543"
+  },
+  "aarvi_clean_000544": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000544"
+  },
+  "aarvi_clean_000545": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000545"
+  },
+  "aarvi_clean_000546": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000546"
+  },
+  "aarvi_clean_000547": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000547"
+  },
+  "aarvi_clean_000548": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000548"
+  },
+  "aarvi_clean_000549": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000549"
+  },
+  "aarvi_clean_000550": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000550"
+  },
+  "aarvi_clean_000551": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000551"
+  },
+  "aarvi_clean_000552": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000552"
+  },
+  "aarvi_clean_000553": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000553"
+  },
+  "aarvi_clean_000554": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000554"
+  },
+  "aarvi_clean_000555": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000555"
+  },
+  "aarvi_clean_000556": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000556"
+  },
+  "aarvi_clean_000557": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000557"
+  },
+  "aarvi_clean_000558": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000558"
+  },
+  "aarvi_clean_000559": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000559"
+  },
+  "aarvi_clean_000560": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000560"
+  },
+  "aarvi_clean_000561": {
+    "dataset_path": "prepared_datasets/aarvi_clean",
+    "original_id": "000561"
+  },
+  "buildings_clean_000000": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000000"
+  },
+  "buildings_clean_000001": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000001"
+  },
+  "buildings_clean_000002": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000002"
+  },
+  "buildings_clean_000003": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000003"
+  },
+  "buildings_clean_000004": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000004"
+  },
+  "buildings_clean_000005": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000005"
+  },
+  "buildings_clean_000006": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000006"
+  },
+  "buildings_clean_000007": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000007"
+  },
+  "buildings_clean_000008": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000008"
+  },
+  "buildings_clean_000009": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000009"
+  },
+  "buildings_clean_000010": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000010"
+  },
+  "buildings_clean_000011": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000011"
+  },
+  "buildings_clean_000012": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000012"
+  },
+  "buildings_clean_000013": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000013"
+  },
+  "buildings_clean_000014": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000014"
+  },
+  "buildings_clean_000015": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000015"
+  },
+  "buildings_clean_000016": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000016"
+  },
+  "buildings_clean_000017": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000017"
+  },
+  "buildings_clean_000018": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000018"
+  },
+  "buildings_clean_000019": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000019"
+  },
+  "buildings_clean_000020": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000020"
+  },
+  "buildings_clean_000021": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000021"
+  },
+  "buildings_clean_000022": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000022"
+  },
+  "buildings_clean_000023": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000023"
+  },
+  "buildings_clean_000024": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000024"
+  },
+  "buildings_clean_000025": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000025"
+  },
+  "buildings_clean_000026": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000026"
+  },
+  "buildings_clean_000027": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000027"
+  },
+  "buildings_clean_000028": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000028"
+  },
+  "buildings_clean_000029": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000029"
+  },
+  "buildings_clean_000030": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000030"
+  },
+  "buildings_clean_000031": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000031"
+  },
+  "buildings_clean_000032": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000032"
+  },
+  "buildings_clean_000033": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000033"
+  },
+  "buildings_clean_000034": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000034"
+  },
+  "buildings_clean_000035": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000035"
+  },
+  "buildings_clean_000036": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000036"
+  },
+  "buildings_clean_000037": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000037"
+  },
+  "buildings_clean_000038": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000038"
+  },
+  "buildings_clean_000039": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000039"
+  },
+  "buildings_clean_000040": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000040"
+  },
+  "buildings_clean_000041": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000041"
+  },
+  "buildings_clean_000042": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000042"
+  },
+  "buildings_clean_000043": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000043"
+  },
+  "buildings_clean_000044": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000044"
+  },
+  "buildings_clean_000045": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000045"
+  },
+  "buildings_clean_000046": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000046"
+  },
+  "buildings_clean_000047": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000047"
+  },
+  "buildings_clean_000048": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000048"
+  },
+  "buildings_clean_000049": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000049"
+  },
+  "buildings_clean_000050": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000050"
+  },
+  "buildings_clean_000051": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000051"
+  },
+  "buildings_clean_000052": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000052"
+  },
+  "buildings_clean_000053": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000053"
+  },
+  "buildings_clean_000054": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000054"
+  },
+  "buildings_clean_000055": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000055"
+  },
+  "buildings_clean_000056": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000056"
+  },
+  "buildings_clean_000057": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000057"
+  },
+  "buildings_clean_000058": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000058"
+  },
+  "buildings_clean_000059": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000059"
+  },
+  "buildings_clean_000060": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000060"
+  },
+  "buildings_clean_000061": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000061"
+  },
+  "buildings_clean_000062": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000062"
+  },
+  "buildings_clean_000063": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000063"
+  },
+  "buildings_clean_000064": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000064"
+  },
+  "buildings_clean_000065": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000065"
+  },
+  "buildings_clean_000066": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000066"
+  },
+  "buildings_clean_000067": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000067"
+  },
+  "buildings_clean_000068": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000068"
+  },
+  "buildings_clean_000069": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000069"
+  },
+  "buildings_clean_000070": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000070"
+  },
+  "buildings_clean_000071": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000071"
+  },
+  "buildings_clean_000072": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000072"
+  },
+  "buildings_clean_000073": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000073"
+  },
+  "buildings_clean_000074": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000074"
+  },
+  "buildings_clean_000075": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000075"
+  },
+  "buildings_clean_000076": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000076"
+  },
+  "buildings_clean_000077": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000077"
+  },
+  "buildings_clean_000078": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000078"
+  },
+  "buildings_clean_000079": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000079"
+  },
+  "buildings_clean_000080": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000080"
+  },
+  "buildings_clean_000081": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000081"
+  },
+  "buildings_clean_000082": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000082"
+  },
+  "buildings_clean_000083": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000083"
+  },
+  "buildings_clean_000084": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000084"
+  },
+  "buildings_clean_000085": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000085"
+  },
+  "buildings_clean_000086": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000086"
+  },
+  "buildings_clean_000087": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000087"
+  },
+  "buildings_clean_000088": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000088"
+  },
+  "buildings_clean_000089": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000089"
+  },
+  "buildings_clean_000090": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000090"
+  },
+  "buildings_clean_000091": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000091"
+  },
+  "buildings_clean_000092": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000092"
+  },
+  "buildings_clean_000093": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000093"
+  },
+  "buildings_clean_000094": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000094"
+  },
+  "buildings_clean_000095": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000095"
+  },
+  "buildings_clean_000096": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000096"
+  },
+  "buildings_clean_000097": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000097"
+  },
+  "buildings_clean_000098": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000098"
+  },
+  "buildings_clean_000099": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000099"
+  },
+  "buildings_clean_000100": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000100"
+  },
+  "buildings_clean_000101": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000101"
+  },
+  "buildings_clean_000102": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000102"
+  },
+  "buildings_clean_000103": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000103"
+  },
+  "buildings_clean_000104": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000104"
+  },
+  "buildings_clean_000105": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000105"
+  },
+  "buildings_clean_000106": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000106"
+  },
+  "buildings_clean_000107": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000107"
+  },
+  "buildings_clean_000108": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000108"
+  },
+  "buildings_clean_000109": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000109"
+  },
+  "buildings_clean_000110": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000110"
+  },
+  "buildings_clean_000111": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000111"
+  },
+  "buildings_clean_000112": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000112"
+  },
+  "buildings_clean_000113": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000113"
+  },
+  "buildings_clean_000114": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000114"
+  },
+  "buildings_clean_000115": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000115"
+  },
+  "buildings_clean_000116": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000116"
+  },
+  "buildings_clean_000117": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000117"
+  },
+  "buildings_clean_000118": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000118"
+  },
+  "buildings_clean_000119": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000119"
+  },
+  "buildings_clean_000120": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000120"
+  },
+  "buildings_clean_000121": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000121"
+  },
+  "buildings_clean_000122": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000122"
+  },
+  "buildings_clean_000123": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000123"
+  },
+  "buildings_clean_000124": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000124"
+  },
+  "buildings_clean_000125": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000125"
+  },
+  "buildings_clean_000126": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000126"
+  },
+  "buildings_clean_000127": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000127"
+  },
+  "buildings_clean_000128": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000128"
+  },
+  "buildings_clean_000129": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000129"
+  },
+  "buildings_clean_000130": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000130"
+  },
+  "buildings_clean_000131": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000131"
+  },
+  "buildings_clean_000132": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000132"
+  },
+  "buildings_clean_000133": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000133"
+  },
+  "buildings_clean_000134": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000134"
+  },
+  "buildings_clean_000135": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000135"
+  },
+  "buildings_clean_000136": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000136"
+  },
+  "buildings_clean_000137": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000137"
+  },
+  "buildings_clean_000138": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000138"
+  },
+  "buildings_clean_000139": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000139"
+  },
+  "buildings_clean_000140": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000140"
+  },
+  "buildings_clean_000141": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000141"
+  },
+  "buildings_clean_000142": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000142"
+  },
+  "buildings_clean_000143": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000143"
+  },
+  "buildings_clean_000144": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000144"
+  },
+  "buildings_clean_000145": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000145"
+  },
+  "buildings_clean_000146": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000146"
+  },
+  "buildings_clean_000147": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000147"
+  },
+  "buildings_clean_000148": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000148"
+  },
+  "buildings_clean_000149": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000149"
+  },
+  "buildings_clean_000150": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000150"
+  },
+  "buildings_clean_000151": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000151"
+  },
+  "buildings_clean_000152": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000152"
+  },
+  "buildings_clean_000153": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000153"
+  },
+  "buildings_clean_000154": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000154"
+  },
+  "buildings_clean_000155": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000155"
+  },
+  "buildings_clean_000156": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000156"
+  },
+  "buildings_clean_000157": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000157"
+  },
+  "buildings_clean_000158": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000158"
+  },
+  "buildings_clean_000159": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000159"
+  },
+  "buildings_clean_000160": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000160"
+  },
+  "buildings_clean_000161": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000161"
+  },
+  "buildings_clean_000162": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000162"
+  },
+  "buildings_clean_000163": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000163"
+  },
+  "buildings_clean_000164": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000164"
+  },
+  "buildings_clean_000165": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000165"
+  },
+  "buildings_clean_000166": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000166"
+  },
+  "buildings_clean_000167": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000167"
+  },
+  "buildings_clean_000168": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000168"
+  },
+  "buildings_clean_000169": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000169"
+  },
+  "buildings_clean_000170": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000170"
+  },
+  "buildings_clean_000171": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000171"
+  },
+  "buildings_clean_000172": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000172"
+  },
+  "buildings_clean_000173": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000173"
+  },
+  "buildings_clean_000174": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000174"
+  },
+  "buildings_clean_000175": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000175"
+  },
+  "buildings_clean_000176": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000176"
+  },
+  "buildings_clean_000177": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000177"
+  },
+  "buildings_clean_000178": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000178"
+  },
+  "buildings_clean_000179": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000179"
+  },
+  "buildings_clean_000180": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000180"
+  },
+  "buildings_clean_000181": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000181"
+  },
+  "buildings_clean_000182": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000182"
+  },
+  "buildings_clean_000183": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000183"
+  },
+  "buildings_clean_000184": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000184"
+  },
+  "buildings_clean_000185": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000185"
+  },
+  "buildings_clean_000186": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000186"
+  },
+  "buildings_clean_000187": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000187"
+  },
+  "buildings_clean_000188": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000188"
+  },
+  "buildings_clean_000189": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000189"
+  },
+  "buildings_clean_000190": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000190"
+  },
+  "buildings_clean_000191": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000191"
+  },
+  "buildings_clean_000192": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000192"
+  },
+  "buildings_clean_000193": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000193"
+  },
+  "buildings_clean_000194": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000194"
+  },
+  "buildings_clean_000195": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000195"
+  },
+  "buildings_clean_000196": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000196"
+  },
+  "buildings_clean_000197": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000197"
+  },
+  "buildings_clean_000198": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000198"
+  },
+  "buildings_clean_000199": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000199"
+  },
+  "buildings_clean_000200": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000200"
+  },
+  "buildings_clean_000201": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000201"
+  },
+  "buildings_clean_000202": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000202"
+  },
+  "buildings_clean_000203": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000203"
+  },
+  "buildings_clean_000204": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000204"
+  },
+  "buildings_clean_000205": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000205"
+  },
+  "buildings_clean_000206": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000206"
+  },
+  "buildings_clean_000207": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000207"
+  },
+  "buildings_clean_000208": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000208"
+  },
+  "buildings_clean_000209": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000209"
+  },
+  "buildings_clean_000210": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000210"
+  },
+  "buildings_clean_000211": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000211"
+  },
+  "buildings_clean_000212": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000212"
+  },
+  "buildings_clean_000213": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000213"
+  },
+  "buildings_clean_000214": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000214"
+  },
+  "buildings_clean_000215": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000215"
+  },
+  "buildings_clean_000216": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000216"
+  },
+  "buildings_clean_000217": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000217"
+  },
+  "buildings_clean_000218": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000218"
+  },
+  "buildings_clean_000219": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000219"
+  },
+  "buildings_clean_000220": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000220"
+  },
+  "buildings_clean_000221": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000221"
+  },
+  "buildings_clean_000222": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000222"
+  },
+  "buildings_clean_000223": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000223"
+  },
+  "buildings_clean_000224": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000224"
+  },
+  "buildings_clean_000225": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000225"
+  },
+  "buildings_clean_000226": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000226"
+  },
+  "buildings_clean_000227": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000227"
+  },
+  "buildings_clean_000228": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000228"
+  },
+  "buildings_clean_000229": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000229"
+  },
+  "buildings_clean_000230": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000230"
+  },
+  "buildings_clean_000231": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000231"
+  },
+  "buildings_clean_000232": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000232"
+  },
+  "buildings_clean_000233": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000233"
+  },
+  "buildings_clean_000234": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000234"
+  },
+  "buildings_clean_000235": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000235"
+  },
+  "buildings_clean_000236": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000236"
+  },
+  "buildings_clean_000237": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000237"
+  },
+  "buildings_clean_000238": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000238"
+  },
+  "buildings_clean_000239": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000239"
+  },
+  "buildings_clean_000240": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000240"
+  },
+  "buildings_clean_000241": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000241"
+  },
+  "buildings_clean_000242": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000242"
+  },
+  "buildings_clean_000243": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000243"
+  },
+  "buildings_clean_000244": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000244"
+  },
+  "buildings_clean_000245": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000245"
+  },
+  "buildings_clean_000246": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000246"
+  },
+  "buildings_clean_000247": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000247"
+  },
+  "buildings_clean_000248": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000248"
+  },
+  "buildings_clean_000249": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000249"
+  },
+  "buildings_clean_000250": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000250"
+  },
+  "buildings_clean_000251": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000251"
+  },
+  "buildings_clean_000252": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000252"
+  },
+  "buildings_clean_000253": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000253"
+  },
+  "buildings_clean_000254": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000254"
+  },
+  "buildings_clean_000255": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000255"
+  },
+  "buildings_clean_000256": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000256"
+  },
+  "buildings_clean_000257": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000257"
+  },
+  "buildings_clean_000258": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000258"
+  },
+  "buildings_clean_000259": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000259"
+  },
+  "buildings_clean_000260": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000260"
+  },
+  "buildings_clean_000261": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000261"
+  },
+  "buildings_clean_000262": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000262"
+  },
+  "buildings_clean_000263": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000263"
+  },
+  "buildings_clean_000264": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000264"
+  },
+  "buildings_clean_000265": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000265"
+  },
+  "buildings_clean_000266": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000266"
+  },
+  "buildings_clean_000267": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000267"
+  },
+  "buildings_clean_000268": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000268"
+  },
+  "buildings_clean_000269": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000269"
+  },
+  "buildings_clean_000270": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000270"
+  },
+  "buildings_clean_000271": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000271"
+  },
+  "buildings_clean_000272": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000272"
+  },
+  "buildings_clean_000273": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000273"
+  },
+  "buildings_clean_000274": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000274"
+  },
+  "buildings_clean_000275": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000275"
+  },
+  "buildings_clean_000276": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000276"
+  },
+  "buildings_clean_000277": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000277"
+  },
+  "buildings_clean_000278": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000278"
+  },
+  "buildings_clean_000279": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000279"
+  },
+  "buildings_clean_000280": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000280"
+  },
+  "buildings_clean_000281": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000281"
+  },
+  "buildings_clean_000282": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000282"
+  },
+  "buildings_clean_000283": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000283"
+  },
+  "buildings_clean_000284": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000284"
+  },
+  "buildings_clean_000285": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000285"
+  },
+  "buildings_clean_000286": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000286"
+  },
+  "buildings_clean_000287": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000287"
+  },
+  "buildings_clean_000288": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000288"
+  },
+  "buildings_clean_000289": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000289"
+  },
+  "buildings_clean_000290": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000290"
+  },
+  "buildings_clean_000291": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000291"
+  },
+  "buildings_clean_000292": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000292"
+  },
+  "buildings_clean_000293": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000293"
+  },
+  "buildings_clean_000294": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000294"
+  },
+  "buildings_clean_000295": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000295"
+  },
+  "buildings_clean_000296": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000296"
+  },
+  "buildings_clean_000297": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000297"
+  },
+  "buildings_clean_000298": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000298"
+  },
+  "buildings_clean_000299": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000299"
+  },
+  "buildings_clean_000300": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000300"
+  },
+  "buildings_clean_000301": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000301"
+  },
+  "buildings_clean_000302": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000302"
+  },
+  "buildings_clean_000303": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000303"
+  },
+  "buildings_clean_000304": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000304"
+  },
+  "buildings_clean_000305": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000305"
+  },
+  "buildings_clean_000306": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000306"
+  },
+  "buildings_clean_000307": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000307"
+  },
+  "buildings_clean_000308": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000308"
+  },
+  "buildings_clean_000309": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000309"
+  },
+  "buildings_clean_000310": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000310"
+  },
+  "buildings_clean_000311": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000311"
+  },
+  "buildings_clean_000312": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000312"
+  },
+  "buildings_clean_000313": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000313"
+  },
+  "buildings_clean_000314": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000314"
+  },
+  "buildings_clean_000315": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000315"
+  },
+  "buildings_clean_000316": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000316"
+  },
+  "buildings_clean_000317": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000317"
+  },
+  "buildings_clean_000318": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000318"
+  },
+  "buildings_clean_000319": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000319"
+  },
+  "buildings_clean_000320": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000320"
+  },
+  "buildings_clean_000321": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000321"
+  },
+  "buildings_clean_000322": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000322"
+  },
+  "buildings_clean_000323": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000323"
+  },
+  "buildings_clean_000324": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000324"
+  },
+  "buildings_clean_000325": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000325"
+  },
+  "buildings_clean_000326": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000326"
+  },
+  "buildings_clean_000327": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000327"
+  },
+  "buildings_clean_000328": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000328"
+  },
+  "buildings_clean_000329": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000329"
+  },
+  "buildings_clean_000330": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000330"
+  },
+  "buildings_clean_000331": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000331"
+  },
+  "buildings_clean_000332": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000332"
+  },
+  "buildings_clean_000333": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000333"
+  },
+  "buildings_clean_000334": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000334"
+  },
+  "buildings_clean_000335": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000335"
+  },
+  "buildings_clean_000336": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000336"
+  },
+  "buildings_clean_000337": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000337"
+  },
+  "buildings_clean_000338": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000338"
+  },
+  "buildings_clean_000339": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000339"
+  },
+  "buildings_clean_000340": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000340"
+  },
+  "buildings_clean_000341": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000341"
+  },
+  "buildings_clean_000342": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000342"
+  },
+  "buildings_clean_000343": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000343"
+  },
+  "buildings_clean_000344": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000344"
+  },
+  "buildings_clean_000345": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000345"
+  },
+  "buildings_clean_000346": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000346"
+  },
+  "buildings_clean_000347": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000347"
+  },
+  "buildings_clean_000348": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000348"
+  },
+  "buildings_clean_000349": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000349"
+  },
+  "buildings_clean_000350": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000350"
+  },
+  "buildings_clean_000351": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000351"
+  },
+  "buildings_clean_000352": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000352"
+  },
+  "buildings_clean_000353": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000353"
+  },
+  "buildings_clean_000354": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000354"
+  },
+  "buildings_clean_000355": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000355"
+  },
+  "buildings_clean_000356": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000356"
+  },
+  "buildings_clean_000357": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000357"
+  },
+  "buildings_clean_000358": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000358"
+  },
+  "buildings_clean_000359": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000359"
+  },
+  "buildings_clean_000360": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000360"
+  },
+  "buildings_clean_000361": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000361"
+  },
+  "buildings_clean_000362": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000362"
+  },
+  "buildings_clean_000363": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000363"
+  },
+  "buildings_clean_000364": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000364"
+  },
+  "buildings_clean_000365": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000365"
+  },
+  "buildings_clean_000366": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000366"
+  },
+  "buildings_clean_000367": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000367"
+  },
+  "buildings_clean_000368": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000368"
+  },
+  "buildings_clean_000369": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000369"
+  },
+  "buildings_clean_000370": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000370"
+  },
+  "buildings_clean_000371": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000371"
+  },
+  "buildings_clean_000372": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000372"
+  },
+  "buildings_clean_000373": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000373"
+  },
+  "buildings_clean_000374": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000374"
+  },
+  "buildings_clean_000375": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000375"
+  },
+  "buildings_clean_000376": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000376"
+  },
+  "buildings_clean_000377": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000377"
+  },
+  "buildings_clean_000378": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000378"
+  },
+  "buildings_clean_000379": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000379"
+  },
+  "buildings_clean_000380": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000380"
+  },
+  "buildings_clean_000381": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000381"
+  },
+  "buildings_clean_000382": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000382"
+  },
+  "buildings_clean_000383": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000383"
+  },
+  "buildings_clean_000384": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000384"
+  },
+  "buildings_clean_000385": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000385"
+  },
+  "buildings_clean_000386": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000386"
+  },
+  "buildings_clean_000387": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000387"
+  },
+  "buildings_clean_000388": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000388"
+  },
+  "buildings_clean_000389": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000389"
+  },
+  "buildings_clean_000390": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000390"
+  },
+  "buildings_clean_000391": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000391"
+  },
+  "buildings_clean_000392": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000392"
+  },
+  "buildings_clean_000393": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000393"
+  },
+  "buildings_clean_000394": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000394"
+  },
+  "buildings_clean_000395": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000395"
+  },
+  "buildings_clean_000396": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000396"
+  },
+  "buildings_clean_000397": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000397"
+  },
+  "buildings_clean_000398": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000398"
+  },
+  "buildings_clean_000399": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000399"
+  },
+  "buildings_clean_000400": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000400"
+  },
+  "buildings_clean_000401": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000401"
+  },
+  "buildings_clean_000402": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000402"
+  },
+  "buildings_clean_000403": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000403"
+  },
+  "buildings_clean_000404": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000404"
+  },
+  "buildings_clean_000405": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000405"
+  },
+  "buildings_clean_000406": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000406"
+  },
+  "buildings_clean_000407": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000407"
+  },
+  "buildings_clean_000408": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000408"
+  },
+  "buildings_clean_000409": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000409"
+  },
+  "buildings_clean_000410": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000410"
+  },
+  "buildings_clean_000411": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000411"
+  },
+  "buildings_clean_000412": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000412"
+  },
+  "buildings_clean_000413": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000413"
+  },
+  "buildings_clean_000414": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000414"
+  },
+  "buildings_clean_000415": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000415"
+  },
+  "buildings_clean_000416": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000416"
+  },
+  "buildings_clean_000417": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000417"
+  },
+  "buildings_clean_000418": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000418"
+  },
+  "buildings_clean_000419": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000419"
+  },
+  "buildings_clean_000420": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000420"
+  },
+  "buildings_clean_000421": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000421"
+  },
+  "buildings_clean_000422": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000422"
+  },
+  "buildings_clean_000423": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000423"
+  },
+  "buildings_clean_000424": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000424"
+  },
+  "buildings_clean_000425": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000425"
+  },
+  "buildings_clean_000426": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000426"
+  },
+  "buildings_clean_000427": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000427"
+  },
+  "buildings_clean_000428": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000428"
+  },
+  "buildings_clean_000429": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000429"
+  },
+  "buildings_clean_000430": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000430"
+  },
+  "buildings_clean_000431": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000431"
+  },
+  "buildings_clean_000432": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000432"
+  },
+  "buildings_clean_000433": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000433"
+  },
+  "buildings_clean_000434": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000434"
+  },
+  "buildings_clean_000435": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000435"
+  },
+  "buildings_clean_000436": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000436"
+  },
+  "buildings_clean_000437": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000437"
+  },
+  "buildings_clean_000438": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000438"
+  },
+  "buildings_clean_000439": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000439"
+  },
+  "buildings_clean_000440": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000440"
+  },
+  "buildings_clean_000441": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000441"
+  },
+  "buildings_clean_000442": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000442"
+  },
+  "buildings_clean_000443": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000443"
+  },
+  "buildings_clean_000444": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000444"
+  },
+  "buildings_clean_000445": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000445"
+  },
+  "buildings_clean_000446": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000446"
+  },
+  "buildings_clean_000447": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000447"
+  },
+  "buildings_clean_000448": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000448"
+  },
+  "buildings_clean_000449": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000449"
+  },
+  "buildings_clean_000450": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000450"
+  },
+  "buildings_clean_000451": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000451"
+  },
+  "buildings_clean_000452": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000452"
+  },
+  "buildings_clean_000453": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000453"
+  },
+  "buildings_clean_000454": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000454"
+  },
+  "buildings_clean_000455": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000455"
+  },
+  "buildings_clean_000456": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000456"
+  },
+  "buildings_clean_000457": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000457"
+  },
+  "buildings_clean_000458": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000458"
+  },
+  "buildings_clean_000459": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000459"
+  },
+  "buildings_clean_000460": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000460"
+  },
+  "buildings_clean_000461": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000461"
+  },
+  "buildings_clean_000462": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000462"
+  },
+  "buildings_clean_000463": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000463"
+  },
+  "buildings_clean_000464": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000464"
+  },
+  "buildings_clean_000465": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000465"
+  },
+  "buildings_clean_000466": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000466"
+  },
+  "buildings_clean_000467": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000467"
+  },
+  "buildings_clean_000468": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000468"
+  },
+  "buildings_clean_000469": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000469"
+  },
+  "buildings_clean_000470": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000470"
+  },
+  "buildings_clean_000471": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000471"
+  },
+  "buildings_clean_000472": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000472"
+  },
+  "buildings_clean_000473": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000473"
+  },
+  "buildings_clean_000474": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000474"
+  },
+  "buildings_clean_000475": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000475"
+  },
+  "buildings_clean_000476": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000476"
+  },
+  "buildings_clean_000477": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000477"
+  },
+  "buildings_clean_000478": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000478"
+  },
+  "buildings_clean_000479": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000479"
+  },
+  "buildings_clean_000480": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000480"
+  },
+  "buildings_clean_000481": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000481"
+  },
+  "buildings_clean_000482": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000482"
+  },
+  "buildings_clean_000483": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000483"
+  },
+  "buildings_clean_000484": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000484"
+  },
+  "buildings_clean_000485": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000485"
+  },
+  "buildings_clean_000486": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000486"
+  },
+  "buildings_clean_000487": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000487"
+  },
+  "buildings_clean_000488": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000488"
+  },
+  "buildings_clean_000489": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000489"
+  },
+  "buildings_clean_000490": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000490"
+  },
+  "buildings_clean_000491": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000491"
+  },
+  "buildings_clean_000492": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000492"
+  },
+  "buildings_clean_000493": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000493"
+  },
+  "buildings_clean_000494": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000494"
+  },
+  "buildings_clean_000495": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000495"
+  },
+  "buildings_clean_000496": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000496"
+  },
+  "buildings_clean_000497": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000497"
+  },
+  "buildings_clean_000498": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000498"
+  },
+  "buildings_clean_000499": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000499"
+  },
+  "buildings_clean_000500": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000500"
+  },
+  "buildings_clean_000501": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000501"
+  },
+  "buildings_clean_000502": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000502"
+  },
+  "buildings_clean_000503": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000503"
+  },
+  "buildings_clean_000504": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000504"
+  },
+  "buildings_clean_000505": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000505"
+  },
+  "buildings_clean_000506": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000506"
+  },
+  "buildings_clean_000507": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000507"
+  },
+  "buildings_clean_000508": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000508"
+  },
+  "buildings_clean_000509": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000509"
+  },
+  "buildings_clean_000510": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000510"
+  },
+  "buildings_clean_000511": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000511"
+  },
+  "buildings_clean_000512": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000512"
+  },
+  "buildings_clean_000513": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000513"
+  },
+  "buildings_clean_000514": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000514"
+  },
+  "buildings_clean_000515": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000515"
+  },
+  "buildings_clean_000516": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000516"
+  },
+  "buildings_clean_000517": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000517"
+  },
+  "buildings_clean_000518": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000518"
+  },
+  "buildings_clean_000519": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000519"
+  },
+  "buildings_clean_000520": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000520"
+  },
+  "buildings_clean_000521": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000521"
+  },
+  "buildings_clean_000522": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000522"
+  },
+  "buildings_clean_000523": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000523"
+  },
+  "buildings_clean_000524": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000524"
+  },
+  "buildings_clean_000525": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000525"
+  },
+  "buildings_clean_000526": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000526"
+  },
+  "buildings_clean_000527": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000527"
+  },
+  "buildings_clean_000528": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000528"
+  },
+  "buildings_clean_000529": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000529"
+  },
+  "buildings_clean_000530": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000530"
+  },
+  "buildings_clean_000531": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000531"
+  },
+  "buildings_clean_000532": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000532"
+  },
+  "buildings_clean_000533": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000533"
+  },
+  "buildings_clean_000534": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000534"
+  },
+  "buildings_clean_000535": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000535"
+  },
+  "buildings_clean_000536": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000536"
+  },
+  "buildings_clean_000537": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000537"
+  },
+  "buildings_clean_000538": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000538"
+  },
+  "buildings_clean_000539": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000539"
+  },
+  "buildings_clean_000540": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000540"
+  },
+  "buildings_clean_000541": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000541"
+  },
+  "buildings_clean_000542": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000542"
+  },
+  "buildings_clean_000543": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000543"
+  },
+  "buildings_clean_000544": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000544"
+  },
+  "buildings_clean_000545": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000545"
+  },
+  "buildings_clean_000546": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000546"
+  },
+  "buildings_clean_000547": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000547"
+  },
+  "buildings_clean_000548": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000548"
+  },
+  "buildings_clean_000549": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000549"
+  },
+  "buildings_clean_000550": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000550"
+  },
+  "buildings_clean_000551": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000551"
+  },
+  "buildings_clean_000552": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000552"
+  },
+  "buildings_clean_000553": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000553"
+  },
+  "buildings_clean_000554": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000554"
+  },
+  "buildings_clean_000555": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000555"
+  },
+  "buildings_clean_000556": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000556"
+  },
+  "buildings_clean_000557": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000557"
+  },
+  "buildings_clean_000558": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000558"
+  },
+  "buildings_clean_000559": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000559"
+  },
+  "buildings_clean_000560": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000560"
+  },
+  "buildings_clean_000561": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000561"
+  },
+  "buildings_clean_000562": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000562"
+  },
+  "buildings_clean_000563": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000563"
+  },
+  "buildings_clean_000564": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000564"
+  },
+  "buildings_clean_000565": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000565"
+  },
+  "buildings_clean_000566": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000566"
+  },
+  "buildings_clean_000567": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000567"
+  },
+  "buildings_clean_000568": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000568"
+  },
+  "buildings_clean_000569": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000569"
+  },
+  "buildings_clean_000570": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000570"
+  },
+  "buildings_clean_000571": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000571"
+  },
+  "buildings_clean_000572": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000572"
+  },
+  "buildings_clean_000573": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000573"
+  },
+  "buildings_clean_000574": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000574"
+  },
+  "buildings_clean_000575": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000575"
+  },
+  "buildings_clean_000576": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000576"
+  },
+  "buildings_clean_000577": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000577"
+  },
+  "buildings_clean_000578": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000578"
+  },
+  "buildings_clean_000579": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000579"
+  },
+  "buildings_clean_000580": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000580"
+  },
+  "buildings_clean_000581": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000581"
+  },
+  "buildings_clean_000582": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000582"
+  },
+  "buildings_clean_000583": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000583"
+  },
+  "buildings_clean_000584": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000584"
+  },
+  "buildings_clean_000585": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000585"
+  },
+  "buildings_clean_000586": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000586"
+  },
+  "buildings_clean_000587": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000587"
+  },
+  "buildings_clean_000588": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000588"
+  },
+  "buildings_clean_000589": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000589"
+  },
+  "buildings_clean_000590": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000590"
+  },
+  "buildings_clean_000591": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000591"
+  },
+  "buildings_clean_000592": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000592"
+  },
+  "buildings_clean_000593": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000593"
+  },
+  "buildings_clean_000594": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000594"
+  },
+  "buildings_clean_000595": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000595"
+  },
+  "buildings_clean_000596": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000596"
+  },
+  "buildings_clean_000597": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000597"
+  },
+  "buildings_clean_000598": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000598"
+  },
+  "buildings_clean_000599": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000599"
+  },
+  "buildings_clean_000600": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000600"
+  },
+  "buildings_clean_000601": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000601"
+  },
+  "buildings_clean_000602": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000602"
+  },
+  "buildings_clean_000603": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000603"
+  },
+  "buildings_clean_000604": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000604"
+  },
+  "buildings_clean_000605": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000605"
+  },
+  "buildings_clean_000606": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000606"
+  },
+  "buildings_clean_000607": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000607"
+  },
+  "buildings_clean_000608": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000608"
+  },
+  "buildings_clean_000609": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000609"
+  },
+  "buildings_clean_000610": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000610"
+  },
+  "buildings_clean_000611": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000611"
+  },
+  "buildings_clean_000612": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000612"
+  },
+  "buildings_clean_000613": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000613"
+  },
+  "buildings_clean_000614": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000614"
+  },
+  "buildings_clean_000615": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000615"
+  },
+  "buildings_clean_000616": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000616"
+  },
+  "buildings_clean_000617": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000617"
+  },
+  "buildings_clean_000618": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000618"
+  },
+  "buildings_clean_000619": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000619"
+  },
+  "buildings_clean_000620": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000620"
+  },
+  "buildings_clean_000621": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000621"
+  },
+  "buildings_clean_000622": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000622"
+  },
+  "buildings_clean_000623": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000623"
+  },
+  "buildings_clean_000624": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000624"
+  },
+  "buildings_clean_000625": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000625"
+  },
+  "buildings_clean_000626": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000626"
+  },
+  "buildings_clean_000627": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000627"
+  },
+  "buildings_clean_000628": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000628"
+  },
+  "buildings_clean_000629": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000629"
+  },
+  "buildings_clean_000630": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000630"
+  },
+  "buildings_clean_000631": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000631"
+  },
+  "buildings_clean_000632": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000632"
+  },
+  "buildings_clean_000633": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000633"
+  },
+  "buildings_clean_000634": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000634"
+  },
+  "buildings_clean_000635": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000635"
+  },
+  "buildings_clean_000636": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000636"
+  },
+  "buildings_clean_000637": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000637"
+  },
+  "buildings_clean_000638": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000638"
+  },
+  "buildings_clean_000639": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000639"
+  },
+  "buildings_clean_000640": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000640"
+  },
+  "buildings_clean_000641": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000641"
+  },
+  "buildings_clean_000642": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000642"
+  },
+  "buildings_clean_000643": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000643"
+  },
+  "buildings_clean_000644": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000644"
+  },
+  "buildings_clean_000645": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000645"
+  },
+  "buildings_clean_000646": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000646"
+  },
+  "buildings_clean_000647": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000647"
+  },
+  "buildings_clean_000648": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000648"
+  },
+  "buildings_clean_000649": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000649"
+  },
+  "buildings_clean_000650": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000650"
+  },
+  "buildings_clean_000651": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000651"
+  },
+  "buildings_clean_000652": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000652"
+  },
+  "buildings_clean_000653": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000653"
+  },
+  "buildings_clean_000654": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000654"
+  },
+  "buildings_clean_000655": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000655"
+  },
+  "buildings_clean_000656": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000656"
+  },
+  "buildings_clean_000657": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000657"
+  },
+  "buildings_clean_000658": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000658"
+  },
+  "buildings_clean_000659": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000659"
+  },
+  "buildings_clean_000660": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000660"
+  },
+  "buildings_clean_000661": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000661"
+  },
+  "buildings_clean_000662": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000662"
+  },
+  "buildings_clean_000663": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000663"
+  },
+  "buildings_clean_000664": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000664"
+  },
+  "buildings_clean_000665": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000665"
+  },
+  "buildings_clean_000666": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000666"
+  },
+  "buildings_clean_000667": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000667"
+  },
+  "buildings_clean_000668": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000668"
+  },
+  "buildings_clean_000669": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000669"
+  },
+  "buildings_clean_000670": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000670"
+  },
+  "buildings_clean_000671": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000671"
+  },
+  "buildings_clean_000672": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000672"
+  },
+  "buildings_clean_000673": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000673"
+  },
+  "buildings_clean_000674": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000674"
+  },
+  "buildings_clean_000675": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000675"
+  },
+  "buildings_clean_000676": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000676"
+  },
+  "buildings_clean_000677": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000677"
+  },
+  "buildings_clean_000678": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000678"
+  },
+  "buildings_clean_000679": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000679"
+  },
+  "buildings_clean_000680": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000680"
+  },
+  "buildings_clean_000681": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000681"
+  },
+  "buildings_clean_000682": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000682"
+  },
+  "buildings_clean_000683": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000683"
+  },
+  "buildings_clean_000684": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000684"
+  },
+  "buildings_clean_000685": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000685"
+  },
+  "buildings_clean_000686": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000686"
+  },
+  "buildings_clean_000687": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000687"
+  },
+  "buildings_clean_000688": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000688"
+  },
+  "buildings_clean_000689": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000689"
+  },
+  "buildings_clean_000690": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000690"
+  },
+  "buildings_clean_000691": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000691"
+  },
+  "buildings_clean_000692": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000692"
+  },
+  "buildings_clean_000693": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000693"
+  },
+  "buildings_clean_000694": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000694"
+  },
+  "buildings_clean_000695": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000695"
+  },
+  "buildings_clean_000696": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000696"
+  },
+  "buildings_clean_000697": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000697"
+  },
+  "buildings_clean_000698": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000698"
+  },
+  "buildings_clean_000699": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000699"
+  },
+  "buildings_clean_000700": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000700"
+  },
+  "buildings_clean_000701": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000701"
+  },
+  "buildings_clean_000702": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000702"
+  },
+  "buildings_clean_000703": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000703"
+  },
+  "buildings_clean_000704": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000704"
+  },
+  "buildings_clean_000705": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000705"
+  },
+  "buildings_clean_000706": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000706"
+  },
+  "buildings_clean_000707": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000707"
+  },
+  "buildings_clean_000708": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000708"
+  },
+  "buildings_clean_000709": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000709"
+  },
+  "buildings_clean_000710": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000710"
+  },
+  "buildings_clean_000711": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000711"
+  },
+  "buildings_clean_000712": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000712"
+  },
+  "buildings_clean_000713": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000713"
+  },
+  "buildings_clean_000714": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000714"
+  },
+  "buildings_clean_000715": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000715"
+  },
+  "buildings_clean_000716": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000716"
+  },
+  "buildings_clean_000717": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000717"
+  },
+  "buildings_clean_000718": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000718"
+  },
+  "buildings_clean_000719": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000719"
+  },
+  "buildings_clean_000720": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000720"
+  },
+  "buildings_clean_000721": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000721"
+  },
+  "buildings_clean_000722": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000722"
+  },
+  "buildings_clean_000723": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000723"
+  },
+  "buildings_clean_000724": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000724"
+  },
+  "buildings_clean_000725": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000725"
+  },
+  "buildings_clean_000726": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000726"
+  },
+  "buildings_clean_000727": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000727"
+  },
+  "buildings_clean_000728": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000728"
+  },
+  "buildings_clean_000729": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000729"
+  },
+  "buildings_clean_000730": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000730"
+  },
+  "buildings_clean_000731": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000731"
+  },
+  "buildings_clean_000732": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000732"
+  },
+  "buildings_clean_000733": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000733"
+  },
+  "buildings_clean_000734": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000734"
+  },
+  "buildings_clean_000735": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000735"
+  },
+  "buildings_clean_000736": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000736"
+  },
+  "buildings_clean_000737": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000737"
+  },
+  "buildings_clean_000738": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000738"
+  },
+  "buildings_clean_000739": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000739"
+  },
+  "buildings_clean_000740": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000740"
+  },
+  "buildings_clean_000741": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000741"
+  },
+  "buildings_clean_000742": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000742"
+  },
+  "buildings_clean_000743": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000743"
+  },
+  "buildings_clean_000744": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000744"
+  },
+  "buildings_clean_000745": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000745"
+  },
+  "buildings_clean_000746": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000746"
+  },
+  "buildings_clean_000747": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000747"
+  },
+  "buildings_clean_000748": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000748"
+  },
+  "buildings_clean_000749": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000749"
+  },
+  "buildings_clean_000750": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000750"
+  },
+  "buildings_clean_000751": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000751"
+  },
+  "buildings_clean_000752": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000752"
+  },
+  "buildings_clean_000753": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000753"
+  },
+  "buildings_clean_000754": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000754"
+  },
+  "buildings_clean_000755": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000755"
+  },
+  "buildings_clean_000756": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000756"
+  },
+  "buildings_clean_000757": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000757"
+  },
+  "buildings_clean_000758": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000758"
+  },
+  "buildings_clean_000759": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000759"
+  },
+  "buildings_clean_000760": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000760"
+  },
+  "buildings_clean_000761": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000761"
+  },
+  "buildings_clean_000762": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000762"
+  },
+  "buildings_clean_000763": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000763"
+  },
+  "buildings_clean_000764": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000764"
+  },
+  "buildings_clean_000765": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000765"
+  },
+  "buildings_clean_000766": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000766"
+  },
+  "buildings_clean_000767": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000767"
+  },
+  "buildings_clean_000768": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000768"
+  },
+  "buildings_clean_000769": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000769"
+  },
+  "buildings_clean_000770": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000770"
+  },
+  "buildings_clean_000771": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000771"
+  },
+  "buildings_clean_000772": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000772"
+  },
+  "buildings_clean_000773": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000773"
+  },
+  "buildings_clean_000774": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000774"
+  },
+  "buildings_clean_000775": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000775"
+  },
+  "buildings_clean_000776": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000776"
+  },
+  "buildings_clean_000777": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000777"
+  },
+  "buildings_clean_000778": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000778"
+  },
+  "buildings_clean_000779": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000779"
+  },
+  "buildings_clean_000780": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000780"
+  },
+  "buildings_clean_000781": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000781"
+  },
+  "buildings_clean_000782": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000782"
+  },
+  "buildings_clean_000783": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000783"
+  },
+  "buildings_clean_000784": {
+    "dataset_path": "prepared_datasets/buildings_clean",
+    "original_id": "000784"
+  }
+}

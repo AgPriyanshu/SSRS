@@ -2,18 +2,22 @@ import os
 import random
 import numpy as np
 import torch
+import json
 from skimage import io, transform
 from scipy.ndimage import rotate, gaussian_filter
 from utils2 import convert_from_color, get_random_pos
 
-class SemanticSegmentationDataset(torch.utils.data.Dataset):
+class MultiDatasetSemanticSegmentation(torch.utils.data.Dataset):
+    """
+    Multi-dataset loader that combines multiple prepared datasets for maximum diversity.
+    Handles loading from different dataset directories based on ID mapping.
+    """
+    
     def __init__(
         self,
         ids,
-        data_pattern=None,
-        dsm_pattern=None,
-        label_pattern=None,
-        data_root="./data/",
+        mapping_file="multi_dataset_mapping.json",
+        data_root="./prepared_datasets/",
         cache=False,
         augmentation=True,
     ):
@@ -23,32 +27,22 @@ class SemanticSegmentationDataset(torch.utils.data.Dataset):
         self.cache = cache
         self.data_root = data_root
         
-        # Set default patterns if not provided
-        if data_pattern is None:
-            data_pattern = "images/img_{}.jpg"
-        if dsm_pattern is None:
-            dsm_pattern = "dsm/dsm_{}.tif" 
-        if label_pattern is None:
-            label_pattern = "labels/label_{}.png"
-            
-        # List of files using patterns
-        self.data_files = [os.path.join(data_root, data_pattern.format(id)) for id in ids]
-        self.dsm_files = [os.path.join(data_root, dsm_pattern.format(id)) for id in ids]
-        self.label_files = [os.path.join(data_root, label_pattern.format(id)) for id in ids]
-
-        # Sanity check: warn if files don't exist (but don't fail immediately)
-        missing_files = []
-        for f in self.data_files + self.dsm_files + self.label_files:
-            if not os.path.isfile(f):
-                missing_files.append(f)
+        # Load dataset mapping
+        if os.path.exists(mapping_file):
+            with open(mapping_file, 'r') as f:
+                self.dataset_mapping = json.load(f)
+        else:
+            raise FileNotFoundError(f"Dataset mapping file not found: {mapping_file}")
         
-        if missing_files:
-            print(f"Warning: {len(missing_files)} files not found:")
-            for f in missing_files[:5]:  # Show first 5 missing files
-                print(f"  - {f}")
-            if len(missing_files) > 5:
-                print(f"  ... and {len(missing_files) - 5} more")
-
+        # Filter IDs to only those in mapping
+        self.ids = [id for id in ids if id in self.dataset_mapping]
+        
+        if len(self.ids) != len(ids):
+            missing = len(ids) - len(self.ids)
+            print(f"Warning: {missing} IDs not found in dataset mapping")
+        
+        print(f"Multi-dataset loader initialized with {len(self.ids)} samples")
+        
         # Initialize cache dicts
         self.data_cache_ = {}
         self.dsm_cache_ = {}
@@ -57,6 +51,21 @@ class SemanticSegmentationDataset(torch.utils.data.Dataset):
     def __len__(self):
         # Return a fixed number for training (can be adjusted based on your needs)
         return 10 * 1000
+
+    def _get_file_paths(self, id):
+        """Get file paths for a given ID from the mapping."""
+        if id not in self.dataset_mapping:
+            raise KeyError(f"ID {id} not found in dataset mapping")
+        
+        mapping = self.dataset_mapping[id]
+        dataset_path = mapping['dataset_path']
+        original_id = mapping['original_id']
+        
+        data_file = os.path.join(dataset_path, "images", f"img_{original_id}.png")
+        dsm_file = os.path.join(dataset_path, "dsm", f"dsm_{original_id}.tif")
+        label_file = os.path.join(dataset_path, "labels", f"label_{original_id}.png")
+        
+        return data_file, dsm_file, label_file
 
     @classmethod
     def data_augmentation(cls, data_p, dsm_p, label_p):
@@ -214,16 +223,20 @@ class SemanticSegmentationDataset(torch.utils.data.Dataset):
         return np.copy(data_p), np.copy(dsm_p), np.copy(label_p)
 
     def __getitem__(self, i):
-        # Pick a random image
-        random_idx = random.randint(0, len(self.data_files) - 1)
+        # Pick a random ID
+        random_idx = random.randint(0, len(self.ids) - 1)
+        selected_id = self.ids[random_idx]
 
         # If the tile hasn't been loaded yet, put in cache
-        if random_idx in self.data_cache_.keys():
-            data = self.data_cache_[random_idx]
+        if selected_id in self.data_cache_.keys():
+            data = self.data_cache_[selected_id]
         else:
+            # Get file paths for this ID
+            data_file, _, _ = self._get_file_paths(selected_id)
+            
             # Load and normalize data in [0, 1]
             try:
-                img_data = io.imread(self.data_files[random_idx])
+                img_data = io.imread(data_file)
                 
                 # Handle different image formats and channels
                 if len(img_data.shape) == 3:
@@ -239,20 +252,22 @@ class SemanticSegmentationDataset(torch.utils.data.Dataset):
                 
                 data = 1 / 255 * np.asarray(data, dtype="float32")
             except Exception as e:
-                print(f"Error loading data file {self.data_files[random_idx]}: {e}")
+                print(f"Error loading data file {data_file}: {e}")
                 # Create dummy data as fallback
                 data = np.zeros((3, 256, 256), dtype="float32")
                 
             if self.cache:
-                self.data_cache_[random_idx] = data
+                self.data_cache_[selected_id] = data
 
-        if random_idx in self.dsm_cache_.keys():
-            dsm = self.dsm_cache_[random_idx]
+        if selected_id in self.dsm_cache_.keys():
+            dsm = self.dsm_cache_[selected_id]
         else:
+            # Get file paths for this ID
+            _, dsm_file, _ = self._get_file_paths(selected_id)
+            
             # Load and normalize DSM in [0, 1]
             try:
                 # Use rasterio for TIF files, skimage for others
-                dsm_file = self.dsm_files[random_idx]
                 if dsm_file.endswith('.tif') or dsm_file.endswith('.tiff'):
                     import rasterio
                     with rasterio.open(dsm_file) as src:
@@ -271,19 +286,22 @@ class SemanticSegmentationDataset(torch.utils.data.Dataset):
                 else:
                     dsm = np.zeros_like(dsm)
             except Exception as e:
-                print(f"Error loading DSM file {self.dsm_files[random_idx]}: {e}")
+                print(f"Error loading DSM file {dsm_file}: {e}")
                 # Create dummy DSM as fallback
                 dsm = np.zeros((256, 256), dtype="float32")
                 
             if self.cache:
-                self.dsm_cache_[random_idx] = dsm
+                self.dsm_cache_[selected_id] = dsm
 
-        if random_idx in self.label_cache_.keys():
-            label = self.label_cache_[random_idx]
+        if selected_id in self.label_cache_.keys():
+            label = self.label_cache_[selected_id]
         else:
+            # Get file paths for this ID
+            _, _, label_file = self._get_file_paths(selected_id)
+            
             # Load labels
             try:
-                label_img = io.imread(self.label_files[random_idx])
+                label_img = io.imread(label_file)
                 
                 # Handle different label formats
                 if len(label_img.shape) == 3:
@@ -293,12 +311,12 @@ class SemanticSegmentationDataset(torch.utils.data.Dataset):
                     # Grayscale labels - assume already class indices
                     label = np.asarray(label_img, dtype="int64")
             except Exception as e:
-                print(f"Error loading label file {self.label_files[random_idx]}: {e}")
+                print(f"Error loading label file {label_file}: {e}")
                 # Create dummy label as fallback
                 label = np.zeros((256, 256), dtype="int64")
                 
             if self.cache:
-                self.label_cache_[random_idx] = label
+                self.label_cache_[selected_id] = label
 
         # Since our tiles are already 256x256 (WINDOW_SIZE), use the full tile
         from constants import WINDOW_SIZE
@@ -317,7 +335,8 @@ class SemanticSegmentationDataset(torch.utils.data.Dataset):
             label_p = label[x1:x2, y1:y2]
 
         # Data augmentation
-        data_p, dsm_p, label_p = self.data_augmentation(data_p, dsm_p, label_p)
+        if self.augmentation:
+            data_p, dsm_p, label_p = self.data_augmentation(data_p, dsm_p, label_p)
 
         # Return the torch.Tensor values
         return (
@@ -325,4 +344,3 @@ class SemanticSegmentationDataset(torch.utils.data.Dataset):
             torch.from_numpy(dsm_p),
             torch.from_numpy(label_p),
         )
-
