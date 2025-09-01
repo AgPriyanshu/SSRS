@@ -3,17 +3,14 @@ Post-processing script to convert building probability masks to refined polygons
 Handles thresholding, noise removal, morphological operations, and polygon extraction.
 """
 
-import os
-import sys
 import numpy as np
 import cv2
 import rasterio
 from rasterio.features import shapes
 import geopandas as gpd
 from shapely.geometry import shape, Polygon
-from shapely.ops import unary_union
-from shapely import simplify, buffer
-from skimage import morphology, measure, filters
+from shapely import simplify
+from skimage import measure
 from skimage.segmentation import clear_border
 import argparse
 from pathlib import Path
@@ -23,22 +20,31 @@ warnings.filterwarnings('ignore')
 
 
 class BuildingPostProcessor:
-    """Post-processing pipeline for building probability masks."""
+    """Enhanced post-processing pipeline for building probability masks with precise boundary extraction."""
     
-    def __init__(self, probability_threshold: float = 0.5, min_area: int = 50, 
-                 max_area: int = 50000, simplify_tolerance: float = 1.0):
+    def __init__(self, probability_threshold: float = 0.5, min_area_pixels: int = 50, 
+                 max_area_pixels: int = 50000, simplify_tolerance: float = 1.0, 
+                 use_watershed: bool = True, use_contours: bool = True):
         """Initialize post-processor.
         
         Args:
             probability_threshold: Threshold for converting probabilities to binary
-            min_area: Minimum building area in pixels
-            max_area: Maximum building area in pixels  
+            min_area_pixels: Minimum building area in pixels (for binary mask filtering)
+            max_area_pixels: Maximum building area in pixels (for binary mask filtering)
             simplify_tolerance: Polygon simplification tolerance
+            use_watershed: Whether to use watershed segmentation for better separation
+            use_contours: Whether to use contour-based polygon extraction for cleaner boundaries
         """
         self.prob_threshold = probability_threshold
-        self.min_area = min_area
-        self.max_area = max_area
+        self.min_area_pixels = min_area_pixels
+        self.max_area_pixels = max_area_pixels
         self.simplify_tolerance = simplify_tolerance
+        self.use_watershed = use_watershed
+        self.use_contours = use_contours
+        
+        # Will be calculated based on transform when processing
+        self.min_area_geo = None
+        self.max_area_geo = None
         
     def load_probability_mask(self, mask_path: str) -> tuple:
         """Load probability mask and metadata."""
@@ -61,7 +67,7 @@ class BuildingPostProcessor:
     
     def adaptive_threshold(self, prob_mask: np.ndarray) -> np.ndarray:
         """Apply adaptive thresholding for better building extraction."""
-        print(f"🎯 Applying adaptive thresholding...")
+        print("🎯 Applying adaptive thresholding...")
         
         # Method 1: Fixed threshold
         binary_fixed = (prob_mask >= self.prob_threshold).astype(np.uint8)
@@ -118,29 +124,173 @@ class BuildingPostProcessor:
         regions = measure.regionprops(labeled)
         
         for region in regions:
-            if region.area < self.min_area or region.area > self.max_area:
+            if region.area < self.min_area_pixels or region.area > self.max_area_pixels:
                 coords = region.coords
                 cleaned[coords[:, 0], coords[:, 1]] = 0
         
-        removed_pixels = np.sum(binary_mask) - np.sum(cleaned)
+        removed_pixels = int(np.sum(binary_mask.astype(np.int32))) - int(np.sum(cleaned.astype(np.int32)))
         print(f"   Removed {removed_pixels:,} pixels during cleaning")
         
         return cleaned
+    
+    def watershed_segmentation(self, prob_mask: np.ndarray, binary_mask: np.ndarray) -> np.ndarray:
+        """Apply watershed segmentation to separate touching buildings."""
+        print("🌊 Applying watershed segmentation for better building separation...")
+        
+        from scipy import ndimage
+        from skimage.segmentation import watershed
+        from skimage.feature import peak_local_maxima
+        
+        # Create distance transform
+        distance = ndimage.distance_transform_edt(binary_mask)
+        
+        # Find local maxima as seeds
+        min_distance = max(5, min(distance.shape) // 20)  # Adaptive minimum distance
+        local_maxima = peak_local_maxima(distance, min_distance=min_distance, threshold_abs=0.3*distance.max())
+        
+        # Create markers
+        markers = np.zeros_like(distance, dtype=np.int32)
+        for i, (y, x) in enumerate(local_maxima):
+            markers[y, x] = i + 1
+        
+        # Use probability mask as elevation map for watershed
+        elevation = 1.0 - prob_mask  # Invert so buildings are valleys
+        
+        # Apply watershed
+        labels = watershed(elevation, markers, mask=binary_mask)
+        
+        print(f"   Found {len(local_maxima)} building seeds")
+        print(f"   Watershed created {np.max(labels)} segments")
+        
+        return labels
+    
+    def extract_contour_polygons(self, binary_mask: np.ndarray, transform: rasterio.Affine) -> list:
+        """Extract polygons using contour detection for cleaner boundaries."""
+        print("🗺️  Extracting polygons using contour detection...")
+        
+        # Find contours using OpenCV for better boundary precision
+        contours, _ = cv2.findContours(binary_mask.astype(np.uint8), 
+                                       cv2.RETR_EXTERNAL, 
+                                       cv2.CHAIN_APPROX_SIMPLE)
+        
+        polygons = []
+        
+        for contour in contours:
+            # Skip very small contours
+            if len(contour) < 3:
+                continue
+                
+            # Convert contour to polygon coordinates
+            contour_coords = []
+            for point in contour:
+                x_pixel, y_pixel = point[0]
+                # Convert pixel coordinates to geographic coordinates
+                x_geo, y_geo = transform * (x_pixel, y_pixel)
+                contour_coords.append([x_geo, y_geo])
+            
+            if len(contour_coords) >= 3:
+                # Close the polygon if not already closed
+                if contour_coords[0] != contour_coords[-1]:
+                    contour_coords.append(contour_coords[0])
+                
+                try:
+                    polygon = Polygon(contour_coords)
+                    if polygon.is_valid and not polygon.is_empty:
+                        polygons.append(polygon)
+                except Exception:
+                    continue
+        
+        print(f"   Extracted {len(polygons)} polygons from contours")
+        return polygons
+    
+    def extract_watershed_polygons(self, labels: np.ndarray, transform: rasterio.Affine) -> list:
+        """Extract polygons from watershed labels."""
+        print("🗺️  Extracting polygons from watershed segments...")
+        
+        polygons = []
+        unique_labels = np.unique(labels)
+        unique_labels = unique_labels[unique_labels > 0]  # Skip background (0)
+        
+        for label_id in unique_labels:
+            # Create binary mask for this label
+            label_mask = (labels == label_id).astype(np.uint8)
+            
+            # Find contours for this label
+            contours, _ = cv2.findContours(label_mask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+            
+            for contour in contours:
+                if len(contour) < 3:
+                    continue
+                    
+                # Convert to geographic coordinates
+                contour_coords = []
+                for point in contour:
+                    x_pixel, y_pixel = point[0]
+                    x_geo, y_geo = transform * (x_pixel, y_pixel)
+                    contour_coords.append([x_geo, y_geo])
+                
+                if len(contour_coords) >= 3:
+                    # Close the polygon
+                    if contour_coords[0] != contour_coords[-1]:
+                        contour_coords.append(contour_coords[0])
+                    
+                    try:
+                        polygon = Polygon(contour_coords)
+                        if polygon.is_valid and not polygon.is_empty:
+                            polygons.append(polygon)
+                    except Exception:
+                        continue
+        
+        print(f"   Extracted {len(polygons)} polygons from watershed")
+        return polygons
     
     def extract_polygons_rasterio(self, binary_mask: np.ndarray, transform: rasterio.Affine) -> list:
         """Extract polygons using rasterio.features.shapes."""
         print("🗺️  Extracting polygons with rasterio...")
         
+        # Calculate geographic area thresholds from pixel area
+        if self.min_area_geo is None:
+            # Get pixel size in each direction
+            pixel_size_x = abs(transform.a)  # pixel width in map units
+            pixel_size_y = abs(transform.e)  # pixel height in map units
+            pixel_area_geo = pixel_size_x * pixel_size_y  # pixel area in geographic units
+            
+            # For very small pixels (geographic coordinates), use reasonable defaults
+            if pixel_area_geo < 1e-10:
+                print(f"   Warning: Very small pixel area ({pixel_area_geo:.2e}), using geographic coordinate mode")
+                # For geographic coordinates, calculate reasonable area thresholds
+                # Assume ~1 meter per pixel approximately and convert to degrees²
+                approx_meter_per_degree = 111000  # rough approximation at equator
+                pixel_size_approx_meters = 1.0  # assume 1m pixel resolution  
+                pixel_size_degrees = pixel_size_approx_meters / approx_meter_per_degree
+                pixel_area_degrees_sq = pixel_size_degrees * pixel_size_degrees
+                
+                self.min_area_geo = self.min_area_pixels * pixel_area_degrees_sq
+                self.max_area_geo = self.max_area_pixels * pixel_area_degrees_sq
+            else:
+                self.min_area_geo = self.min_area_pixels * pixel_area_geo
+                self.max_area_geo = self.max_area_pixels * pixel_area_geo
+            
+            print(f"   Transform: {transform}")
+            print(f"   Pixel size X: {pixel_size_x:.8f}")
+            print(f"   Pixel size Y: {pixel_size_y:.8f}")
+            print(f"   Pixel area in geo units: {pixel_area_geo:.8f}")
+            print(f"   Min area threshold: {self.min_area_geo:.8f} geo units²")
+            print(f"   Max area threshold: {self.max_area_geo:.8f} geo units²")
+        
         polygons = []
+        total_extracted = 0
         
         # Extract shapes (polygons) from binary mask
         for geom, value in shapes(binary_mask.astype(np.uint8), mask=(binary_mask > 0), transform=transform):
             if value == 1:  # Building pixels
                 polygon = shape(geom)
-                if polygon.is_valid and polygon.area > self.min_area:
+                total_extracted += 1
+                if polygon.is_valid and self.min_area_geo <= polygon.area <= self.max_area_geo:
                     polygons.append(polygon)
         
-        print(f"   Extracted {len(polygons)} polygons")
+        print(f"   Total shapes extracted: {total_extracted}")
+        print(f"   Polygons after area filtering: {len(polygons)}")
         return polygons
     
     def refine_polygons(self, polygons: list) -> list:
@@ -149,26 +299,40 @@ class BuildingPostProcessor:
         
         refined = []
         
+        # Calculate appropriate buffer size based on coordinate system
+        if self.min_area_geo is not None and self.min_area_geo < 1e-6:
+            # Geographic coordinates - use very small buffer
+            buffer_size = 1e-6  # ~0.1 meter in degrees
+            simplify_tol = max(self.simplify_tolerance * 1e-6, 1e-7)
+        else:
+            # Projected coordinates - use original buffer
+            buffer_size = 0.5
+            simplify_tol = self.simplify_tolerance
+        
+        print(f"   Using buffer size: {buffer_size:.8f}")
+        print(f"   Using simplify tolerance: {simplify_tol:.8f}")
+        
         for poly in polygons:
             try:
                 # Simplify polygon
-                simplified = simplify(poly, tolerance=self.simplify_tolerance)
+                simplified = simplify(poly, tolerance=simplify_tol)
                 
-                # Small buffer to smooth edges
-                buffered = simplified.buffer(0.5)
-                unbuffered = buffered.buffer(-0.5)
+                # Small buffer to smooth edges (adjusted for coordinate system)
+                buffered = simplified.buffer(buffer_size)
+                unbuffered = buffered.buffer(-buffer_size)
                 
-                if unbuffered.area > self.min_area and unbuffered.is_valid:
+                if unbuffered.area >= self.min_area_geo and unbuffered.is_valid:
                     if hasattr(unbuffered, 'geoms'):
                         # MultiPolygon - take largest part
                         largest = max(unbuffered.geoms, key=lambda x: x.area)
-                        refined.append(largest)
+                        if largest.area >= self.min_area_geo:
+                            refined.append(largest)
                     else:
                         refined.append(unbuffered)
                         
-            except Exception as e:
+            except Exception:
                 # Keep original if processing fails
-                if poly.is_valid and poly.area > self.min_area:
+                if poly.is_valid and poly.area >= self.min_area_geo:
                     refined.append(poly)
         
         print(f"   Refined to {len(refined)} polygons")
@@ -212,7 +376,7 @@ class BuildingPostProcessor:
     def create_visualization(self, prob_mask: np.ndarray, binary_mask: np.ndarray, 
                            polygons: list, output_path: str, transform: rasterio.Affine) -> None:
         """Create side-by-side visualization."""
-        print(f"📊 Creating visualization...")
+        print("📊 Creating visualization...")
         
         import matplotlib.pyplot as plt
         
@@ -238,11 +402,15 @@ class BuildingPostProcessor:
                 # Convert to pixel coordinates
                 pixel_coords = []
                 for x_geo, y_geo in coords:
+                    # Use inverse transform to convert from geographic to pixel coordinates
                     col, row = ~transform * (x_geo, y_geo)
                     pixel_coords.append([col, row])
                 
                 if pixel_coords:
                     pixel_coords = np.array(pixel_coords)
+                    # Clip to image bounds for visualization
+                    pixel_coords[:, 0] = np.clip(pixel_coords[:, 0], 0, prob_mask.shape[1]-1)
+                    pixel_coords[:, 1] = np.clip(pixel_coords[:, 1], 0, prob_mask.shape[0]-1)
                     axes[2].plot(pixel_coords[:, 0], pixel_coords[:, 1], 'r-', linewidth=1)
         
         axes[2].set_title(f'Extracted Polygons ({len(polygons)})')
@@ -274,8 +442,18 @@ class BuildingPostProcessor:
         # Clean binary mask
         cleaned_mask = self.clean_binary_mask(binary_mask)
         
-        # Extract polygons
-        polygons = self.extract_polygons_rasterio(cleaned_mask, transform)
+        # Extract polygons using enhanced methods
+        if self.use_watershed and self.use_contours:
+            print("🎯 Using watershed + contour method for precise boundaries...")
+            # Apply watershed segmentation
+            labels = self.watershed_segmentation(prob_mask, cleaned_mask)
+            polygons = self.extract_watershed_polygons(labels, transform)
+        elif self.use_contours:
+            print("🎯 Using contour-based extraction for clean boundaries...")
+            polygons = self.extract_contour_polygons(cleaned_mask, transform)
+        else:
+            print("🎯 Using standard rasterio extraction...")
+            polygons = self.extract_polygons_rasterio(cleaned_mask, transform)
         
         # Refine polygons
         final_polygons = self.refine_polygons(polygons)
@@ -299,21 +477,25 @@ class BuildingPostProcessor:
 
 def main():
     parser = argparse.ArgumentParser(description='Extract building polygons from probability mask')
-    parser.add_argument('--mask', required=True, help='Path to probability mask')
+    parser.add_argument('--mask', default='./results/Shahada_building_mask_probability.tif',  help='Path to probability mask')
     parser.add_argument('--output', default='./polygon_results/', help='Output directory')
     parser.add_argument('--threshold', type=float, default=0.5, help='Probability threshold')
     parser.add_argument('--min-area', type=int, default=50, help='Minimum area in pixels')
     parser.add_argument('--max-area', type=int, default=50000, help='Maximum area in pixels')
     parser.add_argument('--simplify', type=float, default=1.0, help='Simplification tolerance')
+    parser.add_argument('--watershed', action='store_true', default=True, help='Use watershed segmentation for better building separation')
+    parser.add_argument('--contours', action='store_true', default=True, help='Use contour-based polygon extraction for cleaner boundaries')
     
     args = parser.parse_args()
     
     # Initialize processor
     processor = BuildingPostProcessor(
         probability_threshold=args.threshold,
-        min_area=args.min_area,
-        max_area=args.max_area,
-        simplify_tolerance=args.simplify
+        min_area_pixels=args.min_area,
+        max_area_pixels=args.max_area,
+        simplify_tolerance=args.simplify,
+        use_watershed=args.watershed,
+        use_contours=args.contours
     )
     
     # Process

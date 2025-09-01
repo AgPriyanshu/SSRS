@@ -21,6 +21,166 @@ from shapely.geometry import box
 from constants import WINDOW_SIZE, DATASET_DIR
 
 
+def get_overview_level_for_resolution(raster_path: str, target_resolution: float) -> int:
+    """
+    Find the best overview level that matches the target resolution.
+    
+    Args:
+        raster_path: Path to the raster file with overviews
+        target_resolution: Desired resolution in units/pixel
+        
+    Returns:
+        Overview level (0=base, 1=first overview, etc.)
+    """
+    with rasterio.open(raster_path) as src:
+        base_resolution = abs(src.transform[0])  # Base resolution
+        
+        # If target is finer than base, use base level
+        if target_resolution <= base_resolution:
+            print(f"   Using base level (resolution: {base_resolution:.3f})")
+            return 0
+        
+        # Check overview levels
+        overview_count = src.overviews(1)  # Get overviews for first band
+        best_level = 0
+        best_resolution = base_resolution
+        
+        for i, overview_factor in enumerate(overview_count):
+            overview_resolution = base_resolution * overview_factor
+            
+            # Find the overview level closest to but not coarser than target
+            if overview_resolution <= target_resolution * 1.2:  # Allow 20% tolerance
+                if abs(overview_resolution - target_resolution) < abs(best_resolution - target_resolution):
+                    best_level = i + 1  # +1 because level 0 is base
+                    best_resolution = overview_resolution
+        
+        print(f"   Using overview level {best_level} (resolution: {best_resolution:.3f} vs target: {target_resolution:.3f})")
+        return best_level
+
+
+def extract_overview_as_raster(
+    input_path: str,
+    output_path: str,
+    overview_level: int = 0
+) -> None:
+    """
+    Extract an overview level as a separate raster file.
+    
+    Args:
+        input_path: Path to input raster with overviews
+        output_path: Path for output raster
+        overview_level: Overview level to extract (0=base)
+    """
+    print(f"Extracting overview level {overview_level} from {os.path.basename(input_path)}...")
+    
+    with rasterio.open(input_path) as src:
+        # Create output directory
+        os.makedirs(os.path.dirname(output_path), exist_ok=True)
+        
+        if overview_level == 0:
+            # Use base level
+            profile = src.profile.copy()
+            data = src.read()
+        else:
+            # Use overview level
+            overview_idx = overview_level - 1  # Convert to 0-based index
+            
+            # Get overview dimensions
+            overviews = src.overviews(1)
+            if overview_idx >= len(overviews):
+                raise ValueError(f"Overview level {overview_level} not available (max: {len(overviews)})")
+            
+            # Calculate overview factor and dimensions
+            overview_factor = 2 ** overview_level  # Each level is 2x downsampled
+            new_height = src.height // overview_factor
+            new_width = src.width // overview_factor
+            
+            # Read overview data by specifying output shape
+            overview_data = []
+            for band_idx in range(1, src.count + 1):
+                overview_array = src.read(band_idx, out_shape=(new_height, new_width))
+                overview_data.append(overview_array)
+            
+            data = np.array(overview_data)
+            
+            # Calculate overview transform
+            transform = src.transform * rasterio.Affine.scale(overview_factor)
+            
+            # Update profile
+            profile = src.profile.copy()
+            profile.update({
+                'height': data.shape[1],
+                'width': data.shape[2], 
+                'transform': transform,
+                'compress': 'lzw',
+                'tiled': True,
+                'blockxsize': 512,
+                'blockysize': 512,
+                'BIGTIFF': 'IF_NEEDED'
+            })
+        
+        # Write output
+        with rasterio.open(output_path, 'w', **profile) as dst:
+            dst.write(data)
+    
+    print(f"  Saved overview to: {output_path}")
+
+
+def align_rasters_using_overviews(
+    ortho_path: str,
+    dsm_path: str, 
+    mask_path: str,
+    output_dir: str,
+    target_pixel_size: float
+) -> Tuple[str, str, str]:
+    """
+    Fast raster alignment using existing overviews instead of resampling.
+    
+    Args:
+        ortho_path: Path to orthophoto
+        dsm_path: Path to DSM
+        mask_path: Path to mask 
+        output_dir: Directory for output
+        target_pixel_size: Target resolution in units/pixel
+        
+    Returns:
+        Tuple of paths to aligned rasters
+    """
+    print("🚀 FAST OVERVIEW-BASED ALIGNMENT")
+    print("=" * 50)
+    
+    # Create output directory
+    output_dir = Path(output_dir)
+    output_dir.mkdir(parents=True, exist_ok=True)
+    
+    # Generate output paths  
+    ortho_output = output_dir / f"ortho_overview_{target_pixel_size:.3f}.tif"
+    dsm_output = output_dir / f"dsm_overview_{target_pixel_size:.3f}.tif"
+    mask_output = output_dir / f"mask_overview_{target_pixel_size:.3f}.tif"
+    
+    print(f"Target resolution: {target_pixel_size:.3f} units/pixel")
+    print()
+    
+    # Find best overview levels
+    print("📊 Finding optimal overview levels:")
+    ortho_level = get_overview_level_for_resolution(ortho_path, target_pixel_size)
+    dsm_level = get_overview_level_for_resolution(dsm_path, target_pixel_size)  
+    mask_level = get_overview_level_for_resolution(mask_path, target_pixel_size)
+    
+    print()
+    print("⚡ Extracting overviews (FAST!):")
+    
+    # Extract overviews
+    extract_overview_as_raster(ortho_path, str(ortho_output), ortho_level)
+    extract_overview_as_raster(dsm_path, str(dsm_output), dsm_level)
+    extract_overview_as_raster(mask_path, str(mask_output), mask_level)
+    
+    print()
+    print("✅ Overview-based alignment complete!")
+    
+    return str(ortho_output), str(dsm_output), str(mask_output)
+
+
 def analyze_raster_resolutions(
     raster_paths: List[str],
     labels: List[str] = None
@@ -108,6 +268,13 @@ def resample_raster_to_target(
         
         # Set up the output raster
         kwargs = src.meta.copy()
+        
+        # Estimate output file size and use BIGTIFF if needed
+        import numpy as np
+        dtype_size = np.dtype(src.meta['dtype']).itemsize
+        estimated_size_gb = (target_width * target_height * src.count * dtype_size) / (1024**3)
+        use_bigtiff = estimated_size_gb > 4  # Use BIGTIFF for files > 4GB
+        
         kwargs.update({
             'crs': target_crs,
             'transform': target_transform,
@@ -116,8 +283,12 @@ def resample_raster_to_target(
             'compress': 'lzw',
             'tiled': True,
             'blockxsize': 512,
-            'blockysize': 512
+            'blockysize': 512,
+            'BIGTIFF': 'YES' if use_bigtiff else 'IF_NEEDED'
         })
+        
+        if use_bigtiff:
+            print(f"   Large file detected (~{estimated_size_gb:.1f}GB), using BIGTIFF format")
         
         with rasterio.open(output_path, 'w', **kwargs) as dst:
             for i in range(1, src.count + 1):
@@ -143,18 +314,18 @@ def align_rasters_to_common_resolution(
     custom_pixel_size: float = None
 ) -> Tuple[str, str, str]:
     """
-    Resample all rasters to a common resolution.
+    Align rasters using overview-based downsampling (FAST).
     
     Args:
         ortho_path: Path to orthophoto
         dsm_path: Path to DSM
         mask_path: Path to mask
-        output_dir: Directory to save resampled rasters
-        target_resolution: 'coarsest', 'finest', or 'custom' (defaults to coarsest)
+        output_dir: Directory to save aligned rasters
+        target_resolution: 'coarsest', 'finest', or 'custom' (defaults to coarsest) 
         custom_pixel_size: Custom pixel size if target_resolution='custom'
         
     Returns:
-        Tuple of paths to resampled (ortho, dsm, mask) files
+        Tuple of paths to aligned (ortho, dsm, mask) files
     """
     print("Analyzing raster resolutions...")
     

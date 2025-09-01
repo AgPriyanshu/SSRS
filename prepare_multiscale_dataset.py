@@ -19,21 +19,22 @@ from utils.raster_helpers import (
     prepare_training_dataset,
     validate_dataset_spatial_compatibility,
     calculate_dataset_statistics,
-    analyze_raster_resolutions
+    analyze_raster_resolutions,
+    align_rasters_using_overviews
 )
 from config import config, DatasetConfig
 
 
 def get_overview_resolutions(base_resolution: float, num_levels: int = 4) -> List[float]:
     """
-    Generate overview resolutions for multi-scale training.
+    Generate overview resolutions for multi-scale training (downsampling only).
     
     Args:
-        base_resolution: Base (finest) resolution in units/pixel
+        base_resolution: Base (coarsest) resolution in units/pixel - starts here to avoid upsampling
         num_levels: Number of overview levels to generate
         
     Returns:
-        List of resolutions from finest to coarsest
+        List of resolutions from base to coarsest (all downsampled from base)
     """
     resolutions = []
     for i in range(num_levels):
@@ -70,14 +71,29 @@ def prepare_multiscale_dataset(
         ['ortho', 'dsm', 'mask']
     )
     
-    # Use finest resolution as base
-    base_resolution = min([
+    # Use COARSEST resolution as base to avoid upsampling (which creates artificial detail)
+    base_resolution = max([  # max = coarsest resolution
         resolution_info['ortho']['pixel_size_x'],
         resolution_info['dsm']['pixel_size_x'], 
         resolution_info['mask']['pixel_size_x']
     ])
     
-    print(f"Base (finest) resolution: {base_resolution:.3f} units/pixel")
+    print(f"Base (coarsest) resolution: {base_resolution:.3f} units/pixel")
+    print("🎯 Using coarsest resolution to avoid upsampling - preserves data integrity!")
+    
+    # Show resampling strategy for each input
+    print(f"\n📋 RESAMPLING STRATEGY:")
+    for name, info in [('ortho', resolution_info['ortho']), 
+                      ('dsm', resolution_info['dsm']), 
+                      ('mask', resolution_info['mask'])]:
+        current_res = info['pixel_size_x']
+        if current_res == base_resolution:
+            print(f"   {name:5s}: {current_res:.3f} → {base_resolution:.3f} (✅ no resampling)")
+        elif current_res < base_resolution:
+            print(f"   {name:5s}: {current_res:.3f} → {base_resolution:.3f} (⬇️ downsample {base_resolution/current_res:.1f}x)")
+        else:
+            print(f"   {name:5s}: {current_res:.3f} → {base_resolution:.3f} (❌ WOULD UPSAMPLE - ERROR!)")
+            raise ValueError(f"Logic error: {name} would require upsampling from {current_res:.3f} to {base_resolution:.3f}")
     
     # Generate overview resolutions
     target_resolutions = get_overview_resolutions(base_resolution, num_scale_levels)
@@ -100,20 +116,31 @@ def prepare_multiscale_dataset(
         
         # Create scale-specific dataset name
         scale_dataset_name = f"{dataset_name}_scale{level}"
+        scale_output_dir = Path(output_root) / scale_dataset_name
         
-        # Prepare dataset for this scale
-        dataset_info = prepare_training_dataset(
+        # Use FAST overview-based alignment instead of slow resampling
+        print(f"\n🚀 Using FAST overview-based alignment for scale {level}")
+        aligned_ortho, aligned_dsm, aligned_mask = align_rasters_using_overviews(
             ortho_path=ortho_path,
             dsm_path=dsm_path,
             mask_path=mask_path,
+            output_dir=str(scale_output_dir / "aligned"),
+            target_pixel_size=target_res
+        )
+        
+        # Now prepare dataset using aligned rasters
+        dataset_info = prepare_training_dataset(
+            ortho_path=aligned_ortho,
+            dsm_path=aligned_dsm,
+            mask_path=aligned_mask,
             output_root=output_root,
             dataset_name=scale_dataset_name,
             tile_size=tile_size,
             overlap=overlap,
             train_ratio=train_ratio,
             min_valid_pixels=min_valid_pixels,
-            target_resolution='custom',
-            custom_pixel_size=target_res
+            target_resolution='finest',  # Since they're already aligned
+            custom_pixel_size=None
         )
         
         # Store dataset info

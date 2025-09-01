@@ -27,7 +27,7 @@ def save_mask_as_tif_header(
         "height": height,
         "width": width,
         "count": 1,
-        "dtype": "uint8",
+        "dtype": "uint8",  # Keep uint8 for rasterio compatibility
         "crs": crs,
         "transform": transform,
         "tiled": True,
@@ -36,7 +36,7 @@ def save_mask_as_tif_header(
         "compress": compress,
         "predictor": 2,
         "BIGTIFF": "IF_NEEDED",
-        "nodata": 0,
+        "nodata": 255,  # Use 255 as nodata (outside valid class range 0-1)
     }
     return rasterio.open(output_path, "w", **profile)
 
@@ -58,8 +58,15 @@ def create_binary_mask_streaming(
     compress: str = "ZSTD",
 ) -> None:
     """
-    Stream-rasterize polygons to a 0/1 mask aligned to reference_raster_path,
+    Stream-rasterize polygons to a binary mask aligned to reference_raster_path,
     using small memory. Writes directly to GeoTIFF on disk.
+    
+    Output mask values:
+    - 255: nodata (invalid/missing pixels)  
+    - 0: background (valid non-building pixels)
+    - 1: building (valid building pixels)
+    
+    Uses uint8 dtype with nodata=255 to avoid conflict with valid class labels (0,1).
     """
     shp_path = Path(shapefile_path)
     if not shp_path.exists():
@@ -168,7 +175,7 @@ def create_binary_mask_streaming(
                         transform=win_tfm,
                         fill=0,
                         all_touched=all_touched,
-                        dtype="uint8",
+                        dtype="uint8",  # Back to uint8 for rasterio compatibility
                     )
 
                     # Crop from read window (with halo) down to write window area

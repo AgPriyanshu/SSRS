@@ -27,18 +27,68 @@ from evaluator import Evaluator
 from multiscale_dataset import create_multiscale_datasets
 
 
+def CrossEntropy2d_NoData(input, target, weight=None, ignore_index=255):
+    """2D cross entropy loss that ignores nodata pixels (255)"""
+    import torch.nn.functional as F
+    dim = input.dim()
+    if dim == 2:
+        return F.cross_entropy(input, target, weight=weight, ignore_index=ignore_index)
+    elif dim == 4:
+        output = input.view(input.size(0), input.size(1), -1)
+        output = torch.transpose(output, 1, 2).contiguous()
+        output = output.view(-1, output.size(2))
+        target = target.view(-1)
+        return F.cross_entropy(output, target, weight=weight, ignore_index=ignore_index)
+    else:
+        raise ValueError("Expected 2 or 4 dimensions (got {})".format(dim))
+
+
+def accuracy_NoData(pred, target, ignore_index=255):
+    """Calculate accuracy ignoring nodata pixels (255)"""
+    import numpy as np
+    
+    # Convert to numpy if needed
+    if hasattr(pred, 'cpu'):
+        pred = pred.cpu().numpy()
+    if hasattr(target, 'cpu'):
+        target = target.cpu().numpy()
+    
+    # Create mask for valid pixels (not nodata)
+    valid_mask = (target != ignore_index)
+    
+    if np.sum(valid_mask) == 0:
+        return 0.0  # No valid pixels
+    
+    # Calculate accuracy only on valid pixels
+    valid_pred = pred[valid_mask]
+    valid_target = target[valid_mask]
+    
+    return 100.0 * float(np.sum(valid_pred == valid_target)) / len(valid_target)
+
+
 class MultiscaleTrainer(Trainer):
     """Custom trainer that handles multiscale datasets properly with MLflow tracking."""
     
-    def __init__(self, model_wrapper, evaluator=None, train_loader=None, test_loader=None, use_mlflow=True):
+    def __init__(self, model_wrapper, evaluator=None, train_loader=None, test_loader=None, use_mlflow=True, run_id=None):
         """Initialize with custom data loaders to avoid base class conflicts."""
         # Store custom loaders before calling parent init
         self._custom_train_loader = train_loader
         self._custom_test_loader = test_loader
         self.use_mlflow = use_mlflow
         
+        # Create unique run ID for this training session
+        if run_id is None:
+            from datetime import datetime
+            self.run_id = datetime.now().strftime("%Y%m%d_%H%M%S")
+        else:
+            self.run_id = run_id
+        
         # Initialize parent class
         super().__init__(model_wrapper, evaluator)
+        
+        # Reset tracking lists to ensure clean state
+        self.recent_losses = []
+        self.recent_accuracies = []
         
         # Override with custom loaders if provided
         if train_loader is not None:
@@ -47,9 +97,99 @@ class MultiscaleTrainer(Trainer):
             self.test_loader = test_loader
     
     def train_epoch(self, epoch: int):
-        """Override to add MLflow logging for training metrics."""
-        # Call parent train_epoch
-        train_metrics = super().train_epoch(epoch)
+        """Override to add empty label checking and MLflow logging for training metrics."""
+        from torch.autograd import Variable
+        from utils2 import CrossEntropy2d, accuracy
+        import time
+        import numpy as np
+        
+        self.model.train()
+        start_time = time.time()
+        
+        epoch_loss = 0.0
+        num_batches = 0
+        skipped_batches = 0
+        
+        for batch_idx, (data, dsm, target) in enumerate(self.train_loader):
+            # Check if target contains only background (0) and/or nodata (255) - skip if no buildings (1)
+            valid_pixels = (target != 255)  # Exclude nodata pixels
+            valid_target = target[valid_pixels]
+            
+            if valid_target.numel() == 0 or torch.all(valid_target == 0):
+                skipped_batches += 1
+                if batch_idx % 100 == 0:  # Log occasionally to avoid spam
+                    if valid_target.numel() == 0:
+                        print(f"⚠️  Skipping batch {batch_idx} - all nodata pixels (255)")
+                    else:
+                        print(f"⚠️  Skipping batch {batch_idx} - only background pixels (no buildings)")
+                continue
+            
+            # Move data to GPU
+            data = Variable(data.cuda())
+            dsm = Variable(dsm.cuda())  
+            target = Variable(target.cuda())
+            
+            # Forward pass
+            self.optimizer.zero_grad()
+            output = self.model(data, dsm, mode='Train')
+            loss = CrossEntropy2d_NoData(output, target, weight=self.weights, ignore_index=255)
+            
+            # Backward pass
+            loss.backward()
+            self.optimizer.step()
+            
+            # Track metrics
+            iter_idx = (epoch - 1) * len(self.train_loader) + batch_idx
+            self.losses[iter_idx] = loss.data.item()
+            self.mean_losses[iter_idx] = np.mean(
+                self.losses[max(0, iter_idx - 100):iter_idx]
+            )
+            
+            epoch_loss += loss.data.item()
+            num_batches += 1
+            
+            # Track recent performance for early detection
+            current_loss = loss.data.item()
+            pred = np.argmax(output.data.cpu().numpy()[0], axis=0)
+            gt = target.data.cpu().numpy()[0]
+            current_acc = accuracy_NoData(pred, gt, ignore_index=255)  # Nodata-aware accuracy
+            
+            self.recent_losses.append(current_loss)
+            self.recent_accuracies.append(current_acc)
+            
+            # Keep only recent window
+            if len(self.recent_losses) > self.loss_trend_window:
+                self.recent_losses.pop(0)
+                self.recent_accuracies.pop(0)
+            
+            # Print progress every 10 iterations for faster feedback
+            if batch_idx % 10 == 0:
+                recent_loss = np.mean(self.recent_losses) if self.recent_losses else current_loss
+                recent_acc = np.mean(self.recent_accuracies) if self.recent_accuracies else current_acc
+                print(f"Epoch {epoch:3d} | Batch {batch_idx:4d}/{len(self.train_loader)} | "
+                      f"Loss: {recent_loss:.4f} | Acc: {recent_acc:.1f}% | "
+                      f"Skipped: {skipped_batches}")
+        
+        avg_loss = epoch_loss / num_batches if num_batches > 0 else 0.0
+        training_time = time.time() - start_time
+        
+        # Print epoch summary including skipped batches
+        print(f"📊 Epoch {epoch} Summary:")
+        print(f"   Processed batches: {num_batches}")
+        print(f"   Skipped batches (empty/nodata): {skipped_batches}")
+        print(f"   Total batches: {len(self.train_loader)}")
+        print(f"   Average loss: {avg_loss:.6f}")
+        print(f"   Training time: {training_time:.2f}s")
+        print(f"   ✅ Using nodata-aware loss (ignores pixels=255)")
+        
+        # Prepare metrics for return
+        train_metrics = {
+            'avg_loss': avg_loss,
+            'training_time': training_time,
+            'processed_batches': num_batches,
+            'skipped_batches': skipped_batches,
+            'total_batches': len(self.train_loader)
+        }
         
         # Log training metrics to MLflow
         if self.use_mlflow:
@@ -57,14 +197,50 @@ class MultiscaleTrainer(Trainer):
                 current_lr = self.optimizer.param_groups[0]['lr']
                 mlflow.log_metrics({
                     "epoch": epoch,
-                    "train_loss": train_metrics['avg_loss'],
-                    "train_time": train_metrics['training_time'],
-                    "learning_rate": current_lr
+                    "train_loss": avg_loss,
+                    "train_time": training_time,
+                    "learning_rate": current_lr,
+                    "processed_batches": num_batches,
+                    "skipped_batches": skipped_batches,
+                    "skip_ratio": skipped_batches / len(self.train_loader)
                 }, step=epoch)
             except Exception as e:
                 print(f"MLflow logging warning: {e}")
         
         return train_metrics
+    
+    def save_checkpoint(self, epoch: int, miou: float) -> None:
+        """Override to save model checkpoint with unique run ID.
+        
+        Args:
+            epoch: Current epoch number
+            miou: Current mIoU score
+        """
+        if miou > self.best_miou:
+            output_dir = self.config.get_output_dir()
+            # Include run ID in filename to make it unique for each training run
+            checkpoint_path = f"{output_dir}{self.config.model_name}_run{self.run_id}_epoch{epoch}_{miou:.4f}.pth"
+            
+            self.model_wrapper.save_weights(checkpoint_path)
+            self.best_miou = miou
+            print(f"💾 Model checkpoint saved: {checkpoint_path}")
+            
+            # Also save a 'latest' checkpoint for this run
+            latest_path = f"{output_dir}{self.config.model_name}_run{self.run_id}_latest.pth"
+            self.model_wrapper.save_weights(latest_path)
+            print(f"💾 Latest checkpoint saved: {latest_path}")
+            
+            # Log checkpoint path to MLflow if enabled
+            if self.use_mlflow:
+                try:
+                    import mlflow
+                    mlflow.log_metric("best_miou", miou, step=epoch)
+                    mlflow.log_artifact(checkpoint_path, "model_checkpoints")
+                    mlflow.log_artifact(latest_path, "model_checkpoints")
+                except Exception as e:
+                    print(f"MLflow checkpoint logging warning: {e}")
+        else:
+            print(f"   No improvement (best: {self.best_miou:.4f})")
     
     def _setup_data_loader(self) -> None:
         """Override to prevent base class from creating conflicting loaders."""
@@ -105,11 +281,15 @@ class MultiscaleTrainer(Trainer):
                 # Forward pass
                 output = self.model(data, dsm, mode='Test')
                 
-                # Calculate accuracy
+                # Calculate accuracy (exclude nodata pixels)
                 pred = torch.argmax(output, dim=1)
-                correct = (pred == target).sum().item()
-                total_correct += correct
-                total_pixels += target.numel()
+                valid_mask = (target != 255)  # Exclude nodata pixels
+                if valid_mask.sum() > 0:  # Only count if there are valid pixels
+                    valid_pred = pred[valid_mask]
+                    valid_target = target[valid_mask]
+                    correct = (valid_pred == valid_target).sum().item()
+                    total_correct += correct
+                    total_pixels += valid_target.numel()
         
         accuracy = total_correct / total_pixels if total_pixels > 0 else 0.0
         
@@ -153,17 +333,21 @@ class MultiscaleTrainer(Trainer):
                 # Forward pass
                 output = self.model(data, dsm, mode='Test')
                 
-                # Calculate accuracy
+                # Calculate accuracy (exclude nodata pixels)
                 pred = torch.argmax(output, dim=1)
-                correct = (pred == target).sum().item()
-                total_correct += correct
-                total_pixels += target.numel()
+                valid_mask = (target != 255)  # Exclude nodata pixels
+                if valid_mask.sum() > 0:  # Only count if there are valid pixels
+                    valid_pred = pred[valid_mask]
+                    valid_target = target[valid_mask]
+                    correct = (valid_pred == valid_target).sum().item()
+                    total_correct += correct
+                    total_pixels += valid_target.numel()
                 
-                # Calculate loss (optional)
+                # Calculate loss (optional) - using nodata-aware loss
                 try:
-                    from utils2 import CrossEntropy2d, WEIGHTS
+                    from utils2 import WEIGHTS
                     weights = WEIGHTS.to(device)
-                    loss = CrossEntropy2d(output, target, weight=weights)
+                    loss = CrossEntropy2d_NoData(output, target, weight=weights, ignore_index=255)
                     total_loss += loss.item()
                     num_batches += 1
                 except Exception:
@@ -178,8 +362,9 @@ class MultiscaleTrainer(Trainer):
         
         print("📈 Validation Results:")
         print(f"   Time:     {validation_time:6.2f}s")
-        print(f"   Accuracy: {accuracy:6.1%}")
+        print(f"   Accuracy: {accuracy:6.1%} (excludes nodata pixels)")
         print(f"   Loss:     {avg_loss:6.4f}")
+        print(f"   Valid pixels: {total_pixels:,}")
         
         # Convert accuracy to mIoU-like score for compatibility
         miou_score = accuracy * 100
@@ -345,10 +530,54 @@ def main():
     model_wrapper = ModelWrapper(num_classes=config.n_classes)
     model_wrapper.print_parameter_summary()
     
+    # Verify LoRA configuration
+    print(f"\n🔍 Verifying LoRA fine-tuning configuration...")
+    model = model_wrapper.get_model()
+    total_params = 0
+    trainable_params = 0
+    lora_params = 0
+    frozen_params = 0
+    
+    for name, param in model.named_parameters():
+        total_params += param.numel()
+        if param.requires_grad:
+            trainable_params += param.numel()
+            if 'lora_' in name:
+                lora_params += param.numel()
+        else:
+            frozen_params += param.numel()
+    
+    print(f"   Total parameters: {total_params:,}")
+    print(f"   Trainable parameters: {trainable_params:,} ({100*trainable_params/total_params:.2f}%)")
+    print(f"   LoRA parameters: {lora_params:,}")
+    print(f"   Frozen parameters: {frozen_params:,}")
+    
+    if lora_params == 0:
+        print("   ⚠️  WARNING: No LoRA parameters found! Check LoRA configuration in cfg.py")
+    elif trainable_params > 0.1 * total_params:
+        print("   ⚠️  WARNING: Too many trainable parameters - might not be efficient fine-tuning")
+    else:
+        print("   ✅ LoRA fine-tuning configuration looks correct")
+    
+    # Verify multimodal fusion strategy
+    print(f"\n🔍 Verifying multimodal fusion configuration...")
+    has_fusion_modules = any('fusion' in name.lower() for name, _ in model.named_modules())
+    has_separate_encoders = hasattr(model, 'image_encoder') and hasattr(model, 'fpn1x') and hasattr(model, 'fpn1y')
+    
+    if has_fusion_modules and has_separate_encoders:
+        print("   ✅ Multimodal fusion architecture detected (SEFusion modules)")
+        print("   ✅ Separate RGB and DSM processing paths confirmed")
+    else:
+        print("   ⚠️  WARNING: Expected multimodal fusion architecture not fully detected")
+    
     # Initialize evaluator
     print(f"\n🔍 Initializing evaluator...")
     evaluator = Evaluator()
     print("✅ Evaluator ready")
+    
+    # Create unique run ID for this training session
+    run_id = start_time.strftime('%Y%m%d_%H%M%S')
+    print(f"🆔 Training run ID: {run_id}")
     
     # Initialize custom trainer with data loaders
     print(f"\n🏃 Initializing MEGA multiscale trainer...")
@@ -357,7 +586,8 @@ def main():
         evaluator=evaluator,
         train_loader=train_loader,
         test_loader=test_loader,
-        use_mlflow=use_mlflow
+        use_mlflow=use_mlflow,
+        run_id=run_id
     )
     
     print("✅ MEGA multiscale trainer ready")
@@ -365,10 +595,11 @@ def main():
     # Start MLflow run if enabled
     if use_mlflow:
         try:
-            mlflow.start_run(run_name=f"MEGA_multiscale_{start_time.strftime('%Y%m%d_%H%M%S')}")
+            mlflow.start_run(run_name=f"MEGA_multiscale_{run_id}")
             
             # Log training parameters
             mlflow.log_params({
+                "run_id": run_id,
                 "model": "UNetFormer",
                 "dataset": "MEGA_multiscale",
                 "epochs": mega_dataset.epochs,
@@ -393,12 +624,14 @@ def main():
         print("🚀 STARTING MEGA MULTISCALE TRAINING!")
         print("="*80)
         print("⚡ ULTIMATE CONFIGURATION:")
+        print(f"   • Training Run ID: {run_id}")
         print(f"   • {len(train_dataset):,} training patches from 4 scale levels")
         print(f"   • {len(test_dataset):,} testing patches for validation")
         print(f"   • Perfect 25% distribution across all scales")
         print(f"   • 2 geographic regions (MOPR + Aarvi)")
         print(f"   • Deep Fusion Module with multiscale learning")
         print(f"   • MLflow tracking: {'✅ Enabled' if use_mlflow else '❌ Disabled'}")
+        print(f"   • Model weights: ./weights/*_run{run_id}_*.pth")
         print("")
         print("✨ FIRST EPOCH RESULTS (ALREADY PROVEN!):")
         print("   • Training loss: 0.5816 (excellent progression)")
@@ -418,9 +651,12 @@ def main():
         print(f"\n" + "="*80)
         print("🎉 MEGA MULTISCALE TRAINING COMPLETED!")
         print("="*80)
+        print(f"Run ID:       {run_id}")
         print(f"Completed at: {end_time.strftime('%Y-%m-%d %H:%M:%S')}")
         print(f"Total time:   {str(duration).split('.')[0]}")
         print(f"Dataset: MEGA multiscale with {len(train_dataset):,} patches")
+        print(f"Best weights: ./weights/*_run{run_id}_epoch*_{trainer.best_miou:.4f}.pth")
+        print(f"Latest weights: ./weights/*_run{run_id}_latest.pth")
         print("="*80)
         
         # Log final metrics to MLflow
